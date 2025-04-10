@@ -104,3 +104,14 @@ body {
     margin-top: 4rem;
   }
   
+  .fade-in {
+    animation: fadeIn 1.2s ease-in forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  

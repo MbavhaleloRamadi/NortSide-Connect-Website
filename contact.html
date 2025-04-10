@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - NortSide Connect</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="contact.css" />
+  <script defer src="contact.js"></script>
 </head>
 <body>
   <header class="main-header">
@@ -20,25 +20,16 @@
     </nav>
   </header>
 
-  <section class="about-section fade-in">
-    <div class="content">
-      <h1>Get In Touch</h1>
-      <p>We'd love to hear from you. Whether you're a small business looking for the perfect tech partner or just want to ask us a question — drop us a message.</p>
+  <section class="contact-section fade-in">
+    <h1>Let’s Talk</h1>
+    <p>We’re always excited to work on something cool. Reach out, and we’ll get back to you faster than AI can blink.</p>
 
-      <h2>Business Inquiries</h2>
-      <p>Send us your needs, and we’ll follow up with tailored solutions — from AI agents to full digital transformations.</p>
-
-      <div style="margin: 2rem 0;">
-        <!-- Jotform Embed Placeholder -->
-        <p><em>[Embed your JotForm contact form here]</em></p>
-      </div>
-
-      <h2>Visit Us</h2>
-      <p>Based in Pretoria, South Africa.<br>Serving clients locally & globally.</p>
-
-      <h2>Email & Phone</h2>
-      <p>Email: nortsideconnect24@gmail.com<br>Phone: +27 60 000 0000</p>
-    </div>
+    <form action="https://form.jotform.com/your-jotform-id" method="POST" target="_blank">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Your Email Address" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer class="main-footer">
