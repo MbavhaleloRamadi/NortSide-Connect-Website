@@ -1,0 +1,106 @@
+/* contact.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+  }
+  
+  .main-header {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #00c0ff;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu a:hover,
+  .nav-menu .active {
+    color: #00c0ff;
+  }
+  
+  .contact-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+  
+  .contact-section h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #0f0f0f;
+  }
+  
+  .contact-section p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #666;
+  }
+  
+  .contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .contact-section input,
+  .contact-section textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+  }
+  
+  .contact-section button {
+    background-color: #00c0ff;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-section button:hover {
+    background-color: #0099cc;
+  }
+  
+  footer.main-footer {
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: #0f0f0f;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+  }
+  
