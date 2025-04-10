@@ -196,3 +196,124 @@
     }
   }
   
+  body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeInDown 1s ease-in-out;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00f7ff;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+
+  .nav-menu a:hover {
+    color: #00f7ff;
+  }
+
+  .hero-section {
+    background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 6rem 2rem;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .partner-section, .review-marquee, .ai-importance, .contact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .partner-logos div, .review-track span {
+    display: inline-block;
+    margin: 1rem;
+  }
+
+  .review-track {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .contact-section input, .contact-section textarea {
+    width: 100%;
+    max-width: 500px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+  }
+
+  .contact-section button {
+    padding: 0.75rem 2rem;
+    background-color: #00f7ff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .contact-section button:hover {
+    background-color: #02d0d8;
+  }
+
+  .main-footer {
+    background-color: #0b0c10;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
