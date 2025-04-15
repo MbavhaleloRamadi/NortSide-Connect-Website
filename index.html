@@ -23,16 +23,16 @@
     <nav class="nav-menu">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="service.html">Services</a></li>
         <li><a href="#partners">Partners</a></li>
-        <li><a href="#reviews">Reviews</a></li>
         <li><a href="#whyai">Why AI</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="home" class="hero-section">
+  <section id="home" class="hero-section reveal">
     <div class="hero-content">
       <h1>Empowering Small Businesses</h1>
       <p>Modern B2B AI, Mobile Development, and Cybersecurity tailored for you</p>
@@ -40,7 +40,7 @@
     </div>
   </section>
 
-  <section id="services" class="services-section">
+  <section id="services" class="services-section reveal">
     <h2>Our Services</h2>
     <div class="service">
       <h3>B2B AI Solutions</h3>
@@ -60,9 +60,56 @@
     </div>
   </section>
 
+  <section id="team" class="team-section reveal">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="assets/team1.jpg" alt="Jane Doe">
+        <h3>Jane Doe</h3>
+        <p>Lead AI Engineer</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/team2.jpg" alt="John Smith">
+        <h3>John Smith</h3>
+        <p>Head of Cybersecurity</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/team3.jpg" alt="Nia Molefe">
+        <h3>Nia Molefe</h3>
+        <p>Mobile UX Designer</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline" class="timeline-section reveal">
+    <h2>Our Journey</h2>
+    <ul class="timeline">
+      <li><span>2021</span> - NorthSide Connect is founded with a mission to uplift small businesses through digital solutions.</li>
+      <li><span>2022</span> - Launched first B2B AI solution and trained 10 local companies.</li>
+      <li><span>2023</span> - Expanded into cybersecurity and developed mobile apps for over 30 businesses.</li>
+      <li><span>2024</span> - Reached international clients and launched "NS Academy" for system training.</li>
+    </ul>
+  </section>
+
   <footer class="main-footer">
     &copy; 2025 NorthSide Connect. All rights reserved.
   </footer>
+
+  <script>
+    // Simple scroll reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      for (const reveal of reveals) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveal.getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveal.classList.add('active');
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
