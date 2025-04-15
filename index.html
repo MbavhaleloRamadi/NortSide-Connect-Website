@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NortSide Connect - Home</title>
-  <link rel="stylesheet" href="home.css" />
-  <script defer src="home.js"></script>
+  <meta name="description" content="NorthSide Connect - Empowering Small Businesses through B2B AI Solutions, Mobile App Development, and Cybersecurity Services.">
+  <meta name="keywords" content="AI, B2B, Small Business, Mobile App Development, Cybersecurity, System Training">
+  <meta name="author" content="NorthSide Connect">
+  <title>NorthSide Connect</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="js/main.js" defer></script>
 </head>
+
 <body>
+  <div id="loader">
+    <img src="assets/logo.png" alt="NorthSide Connect Logo" class="loader-logo" />
+  </div>
+
   <header class="main-header">
-    <div class="logo">NortSide Connect</div>
+    <div class="logo">NS Connect</div>
     <nav class="nav-menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="service.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#whyai">Why AI</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="intro-section fade-in">
-    <h1>Welcome to NortSide Connect</h1>
-    <p>Your all-in-one partner for digital transformation. From powerful AI solutions to seamless tech consulting, we help you do more.</p>
-    <a href="contact.html" class="cta-button">Let’s Work Together</a>
-  </section>
-
-  <section class="highlight-section fade-up">
-    <div class="highlight">
-      <h2>Why NortSide?</h2>
-      <ul>
-        <li>Local, industry-focused solutions</li>
-        <li>AI-powered automation</li>
-        <li>Trusted by growing businesses</li>
-        <li>Backed by passionate developers & consultants</li>
-      </ul>
-    </div>
-    <div class="highlight-image">
-      <!-- Replace with an image -->
-      <p>[Insert Image Here]</p>
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h1>Empowering Small Businesses</h1>
+      <p>Modern B2B AI, Mobile Development, and Cybersecurity tailored for you</p>
+      <a href="#services" class="btn-cta">Explore Services</a>
     </div>
   </section>
 
-  <section class="lead-capture fade-in">
-    <h2>Stay Ahead. Stay Connected.</h2>
-    <p>Subscribe for updates, resources, and special offers.</p>
-    <!-- Replace with your Jotform embed code -->
-    <div class="jotform-placeholder">[JotForm Embed Here]</div>
+  <section id="services" class="services-section">
+    <h2>Our Services</h2>
+    <div class="service">
+      <h3>B2B AI Solutions</h3>
+      <p>Custom AI chatbots, automation systems, and analytics to optimize workflows and reduce costs.</p>
+    </div>
+    <div class="service">
+      <h3>Mobile App Development</h3>
+      <p>Cross-platform apps built with scalability and user experience at the core.</p>
+    </div>
+    <div class="service">
+      <h3>AI-Powered Cybersecurity</h3>
+      <p>Proactive AI systems that monitor, detect, and respond to threats in real-time.</p>
+    </div>
+    <div class="service">
+      <h3>2-Month System Implementation Training</h3>
+      <p>We train your team to effectively run, scale, and troubleshoot your new systems.</p>
+    </div>
   </section>
 
   <footer class="main-footer">
-    <p>&copy; 2025 NortSide Connect. Designed to Elevate.</p>
+    &copy; 2025 NorthSide Connect. All rights reserved.
   </footer>
 </body>
+
 </html>
