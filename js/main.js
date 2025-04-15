@@ -29,3 +29,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+  document.addEventListener("DOMContentLoaded", () => {
+    const topics = document.querySelectorAll(".research-topic");
+    const contents = document.querySelectorAll(".research-content");
+    const backButtons = document.querySelectorAll(".back-button");
+  
+    topics.forEach(topic => {
+      topic.addEventListener("click", () => {
+        const targetId = topic.dataset.target;
+        contents.forEach(content => content.style.display = "none");
+        document.getElementById(targetId).style.display = "block";
+        topic.parentElement.style.display = "none";
+      });
+    });
+  
+    backButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        contents.forEach(content => content.style.display = "none");
+        document.querySelector(".research-list").style.display = "flex";
+      });
+    });
+  });
+  
