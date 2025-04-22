@@ -64,22 +64,50 @@ a {
 
 .nav-menu ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
 .nav-menu a {
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: background 0.3s ease;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  color: #0a0a0a;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05), -2px -2px 5px rgba(255,255,255,0.8);
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
-  background-color: #e0f2ff;
-  color: #000;
+  color: #0c3d74;
+  background: #d6ebff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #0c3d74;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 80%;
+}
+
 
 /* Hero Section */
 .hero-section {
