@@ -19,4 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+  reveals.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      section.classList.add('visible');
+    }
+  });
+});
+
   
