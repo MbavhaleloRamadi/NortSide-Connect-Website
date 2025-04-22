@@ -502,3 +502,72 @@ a {
     transform: scale(1);
   }
 }
+
+/* --------------------------
+   Why AI Section
+-------------------------- */
+.why-ai-section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.why-ai-section .intro-text {
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.research-topic {
+  padding: 15px 25px;
+  background-color: #f5f5f5;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 80%;
+  max-width: 600px;
+}
+
+.research-topic:hover {
+  background-color: #e0e0e0;
+}
+
+.research-content {
+  display: none;
+  text-align: left;
+  margin-top: 40px;
+}
+
+.research-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.research-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.research-content .back-button {
+  background: none;
+  border: none;
+  color: #0077cc;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
