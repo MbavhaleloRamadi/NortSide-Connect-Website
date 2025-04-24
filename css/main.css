@@ -114,12 +114,12 @@ a {
 
 /* Hero Section */
 .hero-section {
-  height: 100vh;
   background: url('../assets/ai-bg.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 180px 15px;
 }
 
 .hero-content h1 {
@@ -151,14 +151,15 @@ a {
 /* Services Section */
 .services-section {
   background: linear-gradient(to bottom right, #e0f7ff, #ffffff);
-  padding: 4rem 2rem;
+  padding: 1px 20px;
   text-align: center;
   position: relative;
+  justify-content: center;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
   gap: 2rem; /* spacing between cards */
   margin-top: 2rem;
   padding: 0 1rem;
@@ -315,8 +316,14 @@ a {
 /* Services Page */
 .services-page {
   background: linear-gradient(to bottom right, #fdfbfb, #ebedee); /* Light mist gradient */
-  padding: 4rem 2rem;
   text-align: center;
+  padding: 180px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
 }
 
 .services-page h1 {
@@ -490,7 +497,7 @@ a {
    Why AI Section
 -------------------------- */
 .why-ai-section {
-  padding: 80px 20px;
+  padding: 180px 20px;
   max-width: 1000px;
   margin: auto;
   text-align: center;
@@ -556,10 +563,16 @@ a {
 }
 
 /* Contact Section Styling */
+.contact-section fade-in{
+  padding: 180px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
 .contact-section {
   max-width: 800px;
   margin: 80px auto;
-  padding: 40px 20px;
+  padding: 150px 20px;
   background-color: #f7f8f7;
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
@@ -669,7 +682,7 @@ a {
   }
 }
 
-#chatbot-widget {
+.chatbot-widget {
   animation:
     heartbeat 3s infinite ease-in-out,
     float 6s infinite ease-in-out;
