@@ -1450,3 +1450,531 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* ==========================================================================
+   Services Page Specific Styles
+   Building on main.css structure and maintaining visual consistency
+   ========================================================================== */
+
+/* Services Hero Section */
+.services-hero {
+  padding: 140px 0 80px;
+  color: #fff;
+  position: relative;
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.services-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.services-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+/* Service Tabs */
+.service-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.tab-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tab-btn.active {
+  background-color: #fff;
+  color: var(--primary-color);
+  border-color: #fff;
+}
+
+/* Services Showcase */
+.services-showcase {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+.solution-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.solution-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+  flex-shrink: 0;
+}
+
+.solution-icon i {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.solution-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--dark-color);
+}
+
+.solution-header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.solution-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.feature-card {
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+  color: var(--dark-color);
+}
+
+.feature-card p {
+  color: var(--text-light);
+}
+
+/* Process Section */
+.process-section {
+  padding: 100px 0;
+  background-color: #f9fafb;
+}
+
+.process-section h2,
+.impact-section h2,
+.case-studies h2,
+.partners-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--dark-color);
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.process-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 4px;
+  background-color: var(--primary-color);
+}
+
+.process-step {
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.process-step:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  background-color: var(--primary-color);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 30px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.step-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  flex: 1;
+}
+
+.step-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* Impact Section */
+.impact-section {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.impact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.impact-card {
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.impact-card:hover {
+  transform: translateY(-10px);
+}
+
+.impact-icon {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(52, 152, 219, 0.1);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.impact-icon i {
+  font-size: 1.8rem;
+}
+
+.impact-card h3 {
+  margin-bottom: 15px;
+  color: var(--dark-color);
+}
+
+.impact-source {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Case Studies Section */
+.case-studies {
+  padding: 100px 0;
+  background-color: #f9fafb;
+}
+
+.case-studies-slider {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.case-study {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin: 10px;
+}
+
+.case-image {
+  width: 40%;
+  flex-shrink: 0;
+}
+
+.case-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-content {
+  padding: 30px;
+  flex: 1;
+}
+
+.case-content h3 {
+  margin-bottom: 10px;
+  color: var(--dark-color);
+}
+
+.case-highlight {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.case-industry {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.prev-btn,
+.next-btn {
+  background-color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 10px;
+  margin: 0 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.dot.active {
+  background-color: var(--primary-color);
+}
+
+/* Partners Section */
+.partners-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.partner-card {
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+}
+
+.partner-card img {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.partner-card h4 {
+  color: var(--dark-color);
+  font-size: 1.1rem;
+}
+
+/* Animations for reveal elements */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+  .solution-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .impact-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .service-tabs {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .tab-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .solution-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .solution-icon {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .solution-features,
+  .impact-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .case-study {
+    flex-direction: column;
+  }
+  
+  .case-image {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .process-timeline::before {
+    left: 20px;
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .impact-card {
+    padding: 20px;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+   
+
