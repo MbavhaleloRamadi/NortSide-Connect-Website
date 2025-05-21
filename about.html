@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NorthSide Connect - Empowering Small Businesses through B2B AI Solutions, Mobile App Development, and Cybersecurity Services.">
-  <meta name="keywords" content="AI, B2B, Small Business, Mobile App Development, Cybersecurity, System Training">
+  <meta name="description" content="Discover NorthSide Connect's journey - From vision to innovation, empowering small businesses with accessible technology solutions">
+  <meta name="keywords" content="Tech Innovation, Business Solutions, AI Implementation, Digital Growth Partner, SMB Technology">
   <meta name="author" content="NorthSide Connect">
-  <title>NorthSide Connect</title>
+  <title>Our Journey | NorthSide Connect</title>
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
@@ -16,70 +18,560 @@
 </head>
 
 <body>
+  <!-- Preloader -->
   <div id="loader">
-    <img src="assets/logo.png" alt="NorthSide Connect Logo" class="loader-logo" />
+    <div class="loader">
+      <img src="assets/logo.png" alt="NorthSide Connect Logo" class="loader-logo" />
+      <div class="loader-bar"></div>
+    </div>
   </div>
 
+  <!-- Header -->
   <header class="main-header">
-    <img src="assets/logo.png" alt="NorthSide Connect Logo" class="logo" />
-    <nav class="nav-menu">
+    <a href="index.html" aria-label="NorthSide Connect Home">
+      <img src="assets/logo.png" alt="NorthSide Connect Logo" class="logo" />
+    </a>
+    <nav class="nav-menu" aria-label="Main Navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html"class="active">About</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="why-ai.html">Why AI?</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html" class="active"><i class="far fa-compass"></i> About Us</a></li>
+        <li><a href="service.html"><i class="fas fa-laptop-code"></i> Services</a></li>
+        <li><a href="why-ai.html"><i class="fas fa-microchip"></i> Why AI?</a></li>
+        <li><a href="contact.html"><i class="far fa-comment-dots"></i> Contact</a></li>
       </ul>
     </nav>
+    <div class="mobile-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
   </header>
 
-  <section class="hero-section" style="background: url('../assets/about-bg.jpg') no-repeat center center/cover;">
-    <div class="hero-content">
-      <h1>About NortSide Connect</h1>
-      <p>Driven by innovation. Powered by people. Focused on small business success.</p>
+  <!-- Hero Section -->
+  <section class="hero-section" style="background: linear-gradient(rgba(52, 152, 219, 0.85), rgba(44, 62, 80, 0.9)), url('assets/about-bg.jpg') no-repeat center center/cover;">
+    <div class="container">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Pioneering Digital Growth</h1>
+        <p>Breaking down technological barriers for small businesses since 2020</p>
+        <div class="cta-buttons">
+          <a href="#our-story" class="btn btn-light"><i class="fas fa-book-open"></i> Our Story</a>
+          <a href="contact.html" class="btn btn-outline"><i class="fas fa-handshake"></i> Partner With Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="#ffffff" fill-opacity="1"
+          d="M0,32L60,48C120,64,240,96,360,96C480,96,600,64,720,53.3C840,43,960,53,1080,58.7C1200,64,1320,64,1380,64L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+        </path>
+      </svg>
     </div>
   </section>
 
-  <section class="services-section">
-    <div class="service">
-      <h2>Who We Are</h2>
-      <p>NortSide Connect is a forward-thinking digital solutions team that helps small businesses harness the power of technology.
-         From B2B AI systems to mobile apps and cyber defense — we simplify the complex and deliver results that matter.</p>
-    </div>
-
-    <div class="service">
-      <h2>Our Mission</h2>
-      <p>Empower local and emerging businesses with cutting-edge digital tools so they can compete globally, scale faster, 
-        and operate smarter.</p>
-    </div>
-
-    <div class="service">
-      <h2>What Drives Us</h2>
-      <ul style="text-align: left; max-width: 700px; margin: 0 auto; padding-left: 1.5rem;">
-        <li>🚀 Innovation with Purpose</li>
-        <li>🤝 Community Upliftment</li>
-        <li>🔐 Security at Every Step</li>
-        <li>📱 User-Centered Design</li>
-        <li>💡 Lifelong Learning & Support</li>
-      </ul>
+  <!-- Our Story Section -->
+  <section id="our-story" class="about-section">
+    <div class="container">
+      <div class="about-wrapper">
+        <div class="about-content" data-aos="fade-right">
+          <div class="section-header" style="text-align: left;">
+            <h2>Our Origin Story</h2>
+          </div>
+          <p>Founded in the midst of the 2020 digital revolution, NorthSide Connect emerged with a singular vision: to democratize advanced technology for small and medium businesses.</p>
+          <p>What began as a small group of tech enthusiasts and business strategists has evolved into a dynamic team unified by our commitment to making meaningful technological impact accessible to businesses of all sizes.</p>
+          <p>We've witnessed firsthand how the right technology can transform a struggling business into a market leader. This drives our mission to create solutions that are not just innovative, but immediately valuable and practical for real-world business challenges.</p>
+          
+          <div class="cta-buttons" style="margin-top: 25px;">
+            <a href="#journey" class="btn btn-primary"><i class="fas fa-history"></i> See Our Journey</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-<!-- Chatbot Widget -->
+  <!-- Our Purpose Section -->
+  <section class="services-section" style="background-color: #f7f8fa;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Our Purpose</h2>
+        <p>Every day, we strive to level the digital playing field for small businesses through accessible innovation</p>
+      </div>
+      
+      <div class="mission-values">
+        <div class="value-card" data-aos="fade-up">
+          <div class="value-icon">
+            <i class="far fa-lightbulb"></i>
+          </div>
+          <h3>Practical Innovation</h3>
+          <p>We transform complex technology into practical tools that drive measurable business results, focusing on solutions that matter today.</p>
+        </div>
+        
+        <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="value-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Collaborative Partnership</h3>
+          <p>We're more than service providers—we're genuine partners invested in your long-term success, growth, and technological evolution.</p>
+        </div>
+        
+        <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Security by Design</h3>
+          <p>Digital protection is woven into everything we create, ensuring your business assets remain secure as you embrace new technologies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+  <section class="services-section" style="background-color: white;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>The NorthSide Advantage</h2>
+        <p>What makes our approach to technology implementation uniquely effective for small businesses</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up">
+          <div class="service-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Accessible AI</h3>
+          <p>We translate complex AI concepts into practical applications that drive immediate business value without requiring technical expertise.</p>
+          <a href="service.html#ai" class="service-link">Explore AI Solutions <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <h3>ROI-Focused Implementation</h3>
+          <p>Every solution we design is built with clear business outcomes and measurable returns, ensuring technology that pays for itself.</p>
+          <a href="why-ai.html#roi" class="service-link">See Success Stories <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <h3>Empowerment Through Education</h3>
+          <p>We transfer knowledge alongside technology, ensuring your team can independently leverage and maintain your new digital assets.</p>
+          <a href="service.html#training" class="service-link">Our Training Approach <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <h3>Scalable Solutions</h3>
+          <p>Our technology grows with you, designed from the ground up to adapt and expand as your business reaches new heights.</p>
+          <a href="service.html#scalability" class="service-link">Scaling Strategy <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Metrics Section -->
+  <section class="services-section" style="background-color: #f7f8fa;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Our Impact</h2>
+        <p>The numbers behind our commitment to small business digital transformation</p>
+      </div>
+      
+      <div class="stats-container" data-aos="fade-up">
+        <div class="stat-item">
+          <i class="fas fa-business-time"></i>
+          <div class="stat-counter" data-target="2">0</div>
+          <h3>SMBs Transformed</h3>
+        </div>
+        
+        <div class="stat-item">
+          <i class="fas fa-project-diagram"></i>
+          <div class="stat-counter" data-target="6">0</div>
+          <h3>Solutions Deployed</h3>
+        </div>
+        
+        <div class="stat-item">
+          <i class="fas fa-user-check"></i>
+          <div class="stat-counter" data-target="95">0</div>
+          <h3>Client Retention %</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Timeline Section -->
+  <section id="journey" class="timeline-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Our Evolution</h2>
+        <p>The key milestones that shaped who we are today</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>2020: Taking Flight</h3>
+            <p>Launched NorthSide Connect with our first custom CRM solution for local retailers, helping them survive the digital shift during challenging market conditions.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>2021: The AI Breakthrough</h3>
+            <p>Developed our flagship AI-powered inventory management system that reduced costs by 30% for small businesses, making predictive analytics accessible to non-enterprise companies.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>2022: Recognition & Growth</h3>
+            <p>Named "Regional Innovator of the Year" while expanding our team to include specialized experts in cybersecurity, data science, and user experience design.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>2023: Expanding Horizons</h3>
+            <p>Launched our comprehensive mobile app development division and established our cybersecurity practice, becoming a true end-to-end digital transformation partner.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>2025: Today & Beyond</h3>
+            <p>Currently serving clients across multiple industries with a suite of integrated solutions that make enterprise-grade technology accessible and impactful for growing businesses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section (New) -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>The Minds Behind NorthSide</h2>
+        <p>Meet the passionate experts driving our mission forward</p>
+      </div>
+      
+      <div class="team-grid">
+        <div class="team-member" data-aos="fade-up">
+          <img src="/api/placeholder/400/300" alt="Team Member" class="member-image">
+          <div class="member-info">
+            <h3>Sarah Chen</h3>
+            <p class="role">Founder & CEO</p>
+            <p class="bio">Former enterprise tech consultant who saw the potential to bring Fortune 500 technology to small businesses at accessible price points.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+          <img src="/api/placeholder/400/300" alt="Team Member" class="member-image">
+          <div class="member-info">
+            <h3>Marcus Johnson</h3>
+            <p class="role">CTO</p>
+            <p class="bio">AI specialist with 15+ years experience simplifying complex systems for practical business applications.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+          <img src="/api/placeholder/400/300" alt="Team Member" class="member-image">
+          <div class="member-info">
+            <h3>Elena Rodriguez</h3>
+            <p class="role">Head of Client Success</p>
+            <p class="bio">Dedicated to ensuring technology translates to real business growth through strategic implementation and support.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+          <img src="/api/placeholder/400/300" alt="Team Member" class="member-image">
+          <div class="member-info">
+            <h3>David Park</h3>
+            <p class="role">Lead Developer</p>
+            <p class="bio">Full-stack wizard focused on creating intuitive interfaces that make complex technology feel simple and approachable.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section (New) -->
+  <section class="services-section" style="background-color: #f7f8fa;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Client Success Stories</h2>
+        <p>The real impact our solutions have made for businesses like yours</p>
+      </div>
+      
+      <div class="services-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="service-card" data-aos="fade-up" style="text-align: left; padding: 35px;">
+          <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--primary-color); margin-right: 15px;"></i>
+            <div>
+              <h3 style="margin-bottom: 5px;">Riverside Bakery</h3>
+              <p style="color: var(--text-light); font-style: italic;">Small Business Owner</p>
+            </div>
+          </div>
+          <p style="font-style: italic; margin-bottom: 25px;">"NorthSide's inventory AI completely transformed how we manage ingredients and predict seasonal demand. We've reduced waste by 40% and haven't run out of key supplies since implementation."</p>
+          <div style="display: flex; justify-content: flex-end;">
+            <a href="why-ai.html#case-studies" class="service-link">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100" style="text-align: left; padding: 35px;">
+          <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--primary-color); margin-right: 15px;"></i>
+            <div>
+              <h3 style="margin-bottom: 5px;">Summit Outdoors</h3>
+              <p style="color: var(--text-light); font-style: italic;">Regional Retail Chain</p>
+            </div>
+          </div>
+          <p style="font-style: italic; margin-bottom: 25px;">"The mobile app NorthSide built for us increased our customer engagement by 200% and boosted repeat purchases. The team understood exactly what we needed before we even knew ourselves."</p>
+          <div style="display: flex; justify-content: flex-end;">
+            <a href="why-ai.html#case-studies" class="service-link">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content" data-aos="fade-up">
+        <h2>Ready to Write Your Success Story?</h2>
+        <p>Let's explore how NorthSide Connect can transform your business challenges into digital opportunities.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-light"><i class="fas fa-comments"></i> Start the Conversation</a>
+          <a href="service.html" class="btn btn-outline"><i class="fas fa-th"></i> Browse Our Solutions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chatbot Widget -->
   <div id="chatbot-widget" class="chatbot-bubble">
-      <script data-relevanceai-share-id="d7b62b/62dbd8a9bb24-4565-b8c3-b03b8cad0e93/fd5b5ce5-407a-46ac-9bc8-5ee7779b4186" 
-              src="https://app.relevanceai.com/embed/chat-bubble.js" 
-              data-share-styles="hide_tool_steps=false&hide_file_uploads=false&hide_conversation_list=false&bubble_style=icon&primary_
-                                color=%23f7f8f7&bubble_icon=pd%2Fchat&input_placeholder_text=Type+your+message...&hide_logo=false" ></script>
+    <div class="chatbot-icon">
+      <i class="fas fa-comments"></i>
+    </div>
+    <div class="chatbot-container">
+      <div class="chatbot-header">
+        <h3><i class="fas fa-robot"></i> NorthSide Assistant</h3>
+        <button class="close-btn" title="Close chatbot">
+          <span class="visually-hidden">Close chatbot</span>
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="chatbot-body">
+        <div class="chat-messages">
+          <div class="chat-message bot">
+            <p>Hello! I'm your NorthSide virtual assistant. How can I help you today?</p>
+          </div>
+        </div>
+        <div class="chat-input">
+          <input type="text" placeholder="Type your message..." aria-label="Type your message">
+          <button aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <footer class="main-footer">
-    &copy; 2025 NortSide Connect. All rights reserved.
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="assets/logo.png" alt="NorthSide Connect Logo">
+          <p>Making advanced technology accessible to businesses of all sizes.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="why-ai.html">Why AI?</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Way, Tech Valley</li>
+            <li><i class="fas fa-phone-alt"></i> (555) 234-5678</li>
+            <li><i class="fas fa-envelope"></i> connect@northsideconnect.com</li>
+          </ul>
+        </div>
+        
+        <div class="footer-social">
+          <h3>Stay Connected</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+          <p style="margin-top: 20px; font-size: 0.9rem;">Subscribe to our newsletter for the latest tech insights for SMBs.</p>
+          <div style="margin-top: 10px; display: flex;">
+            <input type="email" placeholder="Your email" style="flex: 1; padding: 8px; border-radius: 4px 0 0 4px; border: none;">
+            <button class="newsletter-btn" title="Subscribe to newsletter">
+              <span class="visually-hidden">Subscribe</span>
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        &copy; 2025 NorthSide Connect. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </div>
+    </div>
   </footer>
-</body>
 
-<!-- Scripts -->
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      disable: 'mobile'
+    });
+    
+    // Stats Counter Animation
+    const counters = document.querySelectorAll('.stat-counter');
+    const speed = 200;
+    
+    const observerOptions = {
+      threshold: 0.5
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const animate = () => {
+            const value = +counter.getAttribute('data-target');
+            const data = +counter.innerText;
+            
+            const time = value / speed;
+            if (data < value) {
+              counter.innerText = Math.ceil(data + time);
+              setTimeout(animate, 1);
+            } else {
+              counter.innerText = value;
+            }
+          }
+          
+          animate();
+          observer.unobserve(counter);
+        }
+      });
+    }, observerOptions);
+    
+    counters.forEach(counter => {
+      observer.observe(counter);
+    });
+    
+    // Loader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').style.opacity = '0';
+        setTimeout(() => {
+          document.getElementById('loader').style.display = 'none';
+        }, 300);
+      }, 500);
+    });
+    
+    // Mobile Navigation
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileToggle.classList.toggle('active');
+      });
+    }
+    
+    // Chatbot Toggle
+    const chatbotIcon = document.querySelector('.chatbot-icon');
+    const chatbotContainer = document.querySelector('.chatbot-container');
+    const closeBtn = document.querySelector('.close-btn');
+    
+    if (chatbotIcon && chatbotContainer) {
+      chatbotIcon.addEventListener('click', () => {
+        chatbotContainer.style.display = 'flex';
+        chatbotIcon.style.display = 'none';
+      });
+      
+      closeBtn.addEventListener('click', () => {
+        chatbotContainer.style.display = 'none';
+        chatbotIcon.style.display = 'flex';
+      });
+    }
+    
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Header scroll effect
+    const header = document.querySelector('.main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
 </html>
-

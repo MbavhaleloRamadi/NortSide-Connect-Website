@@ -151,7 +151,7 @@ if (chatbotToggle && chatbotContainer) {
       if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
         response = 'Hello! How can I help you today?';
       } else if (lowerMessage.includes('services') || lowerMessage.includes('offer')) {
-        response = 'We offer B2B AI Solutions, Mobile App Development, AI-Powered Cybersecurity, and System Implementation Training. Would you like to know more about any of these services?';
+        response = 'We offer B2B AI Solutions, Mobile App Development, AI-Powered Cybersecurity,and System Implementation Training. Would you like to know more about any of these services?';
       } else if (lowerMessage.includes('ai') || lowerMessage.includes('artificial intelligence')) {
         response = 'Our AI solutions include custom chatbots, automation systems, and analytics to optimize your business workflows. Would you like to schedule a consultation?';
       } else if (lowerMessage.includes('mobile') || lowerMessage.includes('app')) {

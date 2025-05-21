@@ -1200,3 +1200,253 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 800px;
   margin: 0 auto;
 }
+
+/* ==========================================================================
+   11. Media Queries
+   ========================================================================== */
+   
+/* Mobile Navigation Improvements */
+.mobile-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--dark-color);
+  transition: var(--transition);
+}
+
+@media screen and (max-width: 768px) {
+  /* Header and Navigation */
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: calc(100vh - 80px);
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 99;
+    overflow-y: auto;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .nav-menu ul {
+    flex-direction: column;
+  }
+  
+  .nav-menu ul li {
+    margin: 0 0 15px 0;
+  }
+  
+  .nav-menu ul li a {
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 120px 20px 60px;
+    text-align: center;
+  }
+  
+  .hero-section .container {
+    flex-direction: column;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .hero-image {
+    width: 80%;
+  }
+  
+  /* Stats Section */
+  .stats-section {
+    padding: 50px 20px;
+  }
+  
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Services Section */
+  .services-section {
+    padding: 60px 20px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .service-card {
+    padding: 25px;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 60px 20px;
+  }
+  
+  .about-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  /* Timeline Section */
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-icon {
+    left: 20px;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-content {
+    width: calc(100% - 50px);
+    margin-left: 50px !important;
+  }
+  
+  .timeline-content::before {
+    display: none;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    padding: 60px 20px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 50px 20px 20px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Tablet Adjustments */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-image {
+    width: 50%;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large Tablet / Small Desktop */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (forced-colors: active) {
+  .btn-primary,
+  .btn-outline:hover,
+  .service::before,
+  .section-header h2::after,
+  .timeline::before,
+  .timeline-icon {
+    forced-color-adjust: none;
+  }
+}
+
+/* Fix for iOS Safari viewport issues */
+@supports (-webkit-touch-callout: none) {
+  .hero-section {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Print Styles */
+@media print {
+  #preloader,
+  #loader,
+  .chatbot-bubble,
+  .btn {
+    display: none !important;
+  }
+  
+  .header,
+  .main-header {
+    position: relative;
+    box-shadow: none;
+  }
+  
+  body {
+    color: #000;
+    background: #fff;
+  }
+  
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  .hero-section,
+  .stats-section,
+  .cta-section {
+    color: #000;
+    background: none !important;
+    padding: 20px 0;
+  }
+}
+
