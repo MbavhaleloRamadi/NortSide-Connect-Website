@@ -6,338 +6,190 @@
   <meta name="description" content="Explore our comprehensive range of AI-driven business solutions for your enterprise needs." />
   <meta name="keywords" content="AI Solutions, Enterprise App Development, Advanced Cybersecurity, Business Process Automation, Digital Transformation, Tech Training" />
   <meta name="author" content="NorthSide Connect" />
-  <title>Business Solutions - NorthSide Connect</title>
+  <title>Business Solutions - NortSide Connect</title>
   <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="js/main.js" defer></script>
-  <script src="js/services.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 
 <body>
   <div id="loader">
-    <img src="assets/logo.png" alt="NorthSide Connect Logo" class="loader-logo" />
-    <div class="loader-progress"><span></span></div>
+    <div class="loader">
+        <img src="assets/logo.png" alt="NorthSide Connect Logo" class="loader-logo" />
+        <div class="loader-bar"></div>
+    </div>
   </div>
 
-  <!-- Header -->
   <header class="main-header">
-    <a href="index.html" aria-label="NorthSide Connect Home">
-      <img src="assets/logo.png" alt="NorthSide Connect Logo" class="logo" />
-    </a>
-    <nav class="nav-menu" aria-label="Main Navigation">
-      <ul>
-        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="about.html"><i class="far fa-compass"></i> About Us</a></li>
-        <li><a href="service.html" class="active"><i class="fas fa-laptop-code"></i> Services</a></li>
-        <li><a href="why-ai.html"><i class="fas fa-microchip"></i> Why AI?</a></li>
-        <li><a href="contact.html"><i class="far fa-comment-dots"></i> Contact</a></li>
-      </ul>
-    </nav>
-    <div class="mobile-toggle">
-      <i class="fas fa-bars"></i>
+    <div class="container">
+      <a href="index.html" aria-label="NorthSide Connect Home">
+        <img src="assets/logo.png" alt="NorthSide Connect Logo" class="logo" />
+      </a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="about.html"><i class="far fa-compass"></i> About Us</a></li>
+          <li><a href="service.html" class="active"><i class="fas fa-laptop-code"></i> Services</a></li>
+          <li><a href="why-ai.html"><i class="fas fa-microchip"></i> Why AI?</a></li>
+          <li><a href="contact.html"><i class="far fa-comment-dots"></i> Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
   </header>
 
-  <section class="services-hero reveal">
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <h1>Enterprise-Grade Solutions</h1>
-      <p class="hero-subtitle">Transforming businesses with custom AI tools, secure platforms, and sustainable digital strategies</p>
-      <div class="service-tabs">
-        <button class="tab-btn active" data-target="ai-solutions">AI Solutions</button>
-        <button class="tab-btn" data-target="cybersecurity">Cybersecurity</button>
-        <button class="tab-btn" data-target="development">App Development</button>
-        <button class="tab-btn" data-target="training">Training</button>
+  <main>
+    <section class="hero-section services-hero" data-aos="fade-in">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Enterprise-Grade Solutions</h1>
+            <p>Transforming businesses with custom AI tools, secure platforms, and sustainable digital strategies.</p>
+            <div class="service-tabs">
+              <button class="tab-btn active" data-target="ai-solutions">AI Solutions</button>
+              <button class="tab-btn" data-target="cybersecurity">Cybersecurity</button>
+              <button class="tab-btn" data-target="development">App Development</button>
+              <button class="tab-btn" data-target="training">Training</button>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="services-showcase">
+      <div class="container">
+        <div id="ai-solutions" class="tab-content active" data-aos="fade-up">
+          <div class="section-header"><h2>AI-Powered Business Solutions</h2></div>
+          <div class="solution-features">
+            <div class="feature-card service-card"><i class="fas fa-robot service-icon"></i><h3>Intelligent Assistants</h3><p>Custom chatbots and virtual assistants that handle customer inquiries and provide 24/7 support.</p></div>
+            <div class="feature-card service-card"><i class="fas fa-chart-line service-icon"></i><h3>Data Analytics</h3><p>BI platforms that transform raw data into actionable insights and predictive forecasts.</p></div>
+            <div class="feature-card service-card"><i class="fas fa-cogs service-icon"></i><h3>Process Automation</h3><p>Smart workflow systems that eliminate repetitive tasks, reduce errors, and increase efficiency.</p></div>
+          </div>
+        </div>
+
+        <div id="cybersecurity" class="tab-content" data-aos="fade-up">
+          <div class="section-header"><h2>Advanced Cybersecurity</h2></div>
+          <div class="solution-features">
+            <div class="feature-card service-card"><i class="fas fa-user-shield service-icon"></i><h3>Threat Monitoring</h3><p>AI-powered systems that detect unusual activities and potential threats by analyzing patterns.</p></div>
+            <div class="feature-card service-card"><i class="fas fa-lock service-icon"></i><h3>Data Encryption</h3><p>Enterprise-grade encryption protocols that secure sensitive information both in transit and at rest.</p></div>
+            <div class="feature-card service-card"><i class="fas fa-sync service-icon"></i><h3>Disaster Recovery</h3><p>Robust backup and recovery systems that ensure business continuity during security incidents.</p></div>
+          </div>
+        </div>
+
+        <div id="development" class="tab-content" data-aos="fade-up">
+            <div class="section-header"><h2>Mobile & Web Development</h2></div>
+            <div class="solution-features">
+              <div class="feature-card service-card"><i class="fas fa-palette service-icon"></i><h3>UI/UX Design</h3><p>Intuitive interfaces and engaging user experiences that reflect your brand and simplify interactions.</p></div>
+              <div class="feature-card service-card"><i class="fas fa-code service-icon"></i><h3>Cross-Platform Apps</h3><p>Efficiently built applications that work seamlessly across iOS, Android, and web browsers.</p></div>
+              <div class="feature-card service-card"><i class="fas fa-shopping-cart service-icon"></i><h3>E-Commerce Solutions</h3><p>Complete online shopping experiences with secure payment processing and inventory management.</p></div>
+            </div>
+        </div>
+
+        <div id="training" class="tab-content" data-aos="fade-up">
+            <div class="section-header"><h2>Comprehensive Training</h2></div>
+            <div class="solution-features">
+              <div class="feature-card service-card"><i class="fas fa-users service-icon"></i><h3>Team Workshops</h3><p>Hands-on sessions where your staff learns to utilize new systems confidently through practical exercises.</p></div>
+              <div class="feature-card service-card"><i class="fas fa-book service-icon"></i><h3>Custom Documentation</h3><p>Tailored guides and resources specific to your implementation, providing ongoing reference for your team.</p></div>
+              <div class="feature-card service-card"><i class="fas fa-video service-icon"></i><h3>Video Tutorials</h3><p>Recorded training modules for new employees or refresher courses, ensuring knowledge continuity.</p></div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section" style="background-color: #f7f8fa;">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Our Implementation Process</h2>
+          <p>A proven methodology ensuring successful transformation with minimal disruption.</p>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-icon">1</div><div class="timeline-content"><h3>Discovery & Analysis</h3><p>We start by understanding your business goals, challenges, and current systems.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-icon">2</div><div class="timeline-content"><h3>Strategic Planning</h3><p>We create a tailored implementation plan with clear milestones and performance metrics.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-icon">3</div><div class="timeline-content"><h3>Development & Integration</h3><p>We build your solution with regular checkpoints to ensure alignment with your needs.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-icon">4</div><div class="timeline-content"><h3>Training & Deployment</h3><p>Your team receives comprehensive training as we roll out the solution.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-icon">5</div><div class="timeline-content"><h3>Ongoing Support</h3><p>We provide continuous maintenance, updates, and consultation to maximize ROI.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-studies">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <h2>Success Stories</h2>
+            <p>Real-world examples of how our solutions transformed businesses.</p>
+          </div>
+          
+          <div class="services-grid">
+              <div class="case-study" data-aos="fade-up" data-aos-delay="100">
+                  <img src="https://via.placeholder.com/400x250/3498db/ffffff?text=Retail" alt="Print Shop Case Study" class="case-image" />
+                  <div class="case-content">
+                    <h3>Pretoria Print Shop</h3>
+                    <p class="case-highlight" style="color: var(--primary-color); font-weight: 600;">70% reduction in appointment no-shows</p>
+                    <p>Implemented our WhatsApp-integrated AI booking system, dramatically improving scheduling efficiency.</p>
+                  </div>
+              </div>
+              <div class="case-study" data-aos="fade-up" data-aos-delay="200">
+                  <img src="https://via.placeholder.com/400x250/2c3e50/ffffff?text=Fashion" alt="Online Boutique Case Study" class="case-image" />
+                  <div class="case-content">
+                    <h3>Cape Town Fashion Brand</h3>
+                    <p class="case-highlight" style="color: var(--primary-color); font-weight: 600;">35% increase in online conversions</p>
+                    <p>Our cross-platform mobile app with AI-powered recommendations created a personalized shopping experience.</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content" data-aos="zoom-in">
+          <h2>Ready to Upgrade Your Business?</h2>
+          <p>Schedule a free consultation to discuss how our solutions can address your specific challenges.</p>
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-light">Book a Consultation</a>
+            <a href="why-ai.html" class="btn btn-outline btn-light">Learn More About AI</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="chatbot-bubble">
+    <div class="chatbot-icon">
+      <i class="fas fa-comments"></i>
+    </div>
+  </div>
+  <div class="chatbot-container">
+    <div class="chatbot-header">
+      <h3><i class="fas fa-robot"></i> NortSide Assistant</h3>
+      <button class="close-btn" title="Close chatbot"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chatbot-body">
+      <div class="chat-messages">
+        <div class="chat-message bot"><p>Hello! I'm the NortSide virtual assistant. How can I help you today?</p></div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your message..." aria-label="Type your message">
+        <button aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
       </div>
     </div>
-  </section>
-
-  <section class="services-showcase reveal">
-    <div class="container">
-      <div class="tab-content active" id="ai-solutions">
-        <div class="solution-header">
-          <div class="solution-icon">
-            <i class="fas fa-brain"></i>
-          </div>
-          <div>
-            <h2>AI-Powered Business Solutions</h2>
-            <p>Custom intelligent systems that transform your business operations</p>
-          </div>
-        </div>
-        <div class="solution-features">
-          <div class="feature-card">
-            <i class="fas fa-robot"></i>
-            <h3>Intelligent Assistants</h3>
-            <p>Custom chatbots and virtual assistants that handle customer inquiries, schedule appointments, 
-              and provide 24/7 support across multiple channels.</p>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Data Analytics Dashboards</h3>
-            <p>Interactive business intelligence platforms that transform your raw data into actionable insights and predictive forecasts.</p>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-cogs"></i>
-            <h3>Process Automation</h3>
-            <p>Smart workflow systems that eliminate repetitive tasks, reduce errors, and free your team to focus on high-value activities.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-content" id="cybersecurity">
-        <div class="solution-header">
-          <div class="solution-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <div>
-            <h2>Advanced Cybersecurity</h2>
-            <p>Comprehensive protection for your digital assets and business data</p>
-          </div>
-        </div>
-        <div class="solution-features">
-          <div class="feature-card">
-            <i class="fas fa-user-shield"></i>
-            <h3>Behavior-Based Monitoring</h3>
-            <p>AI-powered systems that detect unusual activities and potential threats by analyzing patterns and anomalies in user behavior.</p>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-lock"></i>
-            <h3>Data Encryption</h3>
-            <p>Enterprise-grade encryption protocols that secure sensitive information both in transit and at rest.</p>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-sync"></i>
-            <h3>Disaster Recovery</h3>
-            <p>Robust backup and recovery systems that ensure business continuity even during security incidents or system failures.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-content" id="development">
-        <div class="solution-header">
-          <div class="solution-icon">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <div>
-            <h2>Mobile & Web Development</h2>
-            <p>Beautiful, functional applications that elevate your digital presence</p>
-          </div>
-        </div>
-        <div class="solution-features">
-          <div class="feature-card">
-            <i class="fas fa-palette"></i>
-            <h3>UI/UX Design</h3>
-            <p>Intuitive interfaces and engaging user experiences that reflect your brand identity and simplify customer interactions.</p>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-code"></i>
-            <h3>Cross-Platform Apps</h3>
-            <p>Efficiently built applications that work seamlessly across iOS, Android, and web browsers from a single codebase.</p>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-shopping-cart"></i>
-            <h3>E-Commerce Solutions</h3>
-            <p>Complete online shopping experiences with secure payment processing, inventory management, and customer accounts.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-content" id="training">
-        <div class="solution-header">
-          <div class="solution-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div>
-            <h2>Comprehensive Training Program</h2>
-            <p>Empowering your team with the knowledge to maximize your technology investment</p>
-          </div>
-        </div>
-        <div class="solution-features">
-          <div class="feature-card">
-            <i class="fas fa-users"></i>
-            <h3>Team Workshops</h3>
-            <p>Hands-on sessions where your staff learns to utilize new systems confidently through practical exercises and real scenarios.</p>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-book"></i>
-            <h3>Custom Documentation</h3>
-            <p>Tailored guides and resources specific to your implementation, providing ongoing reference for your team.</p>
-          </div>
-          <div class="feature-card">
-            <i class="fas fa-video"></i>
-            <h3>Video Tutorials</h3>
-            <p>Recorded training modules for new employees or refresher courses, ensuring knowledge continuity within your organization.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="process-section reveal">
-    <div class="container">
-      <h2>Our Implementation Process</h2>
-      <p class="section-intro">We follow a proven methodology that ensures successful digital transformation with minimal disruption</p>
-      
-      <div class="process-timeline">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Discovery & Analysis</h3>
-            <p>We start by understanding your business goals, challenges, and current systems through in-depth consultation.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Strategic Planning</h3>
-            <p>Our team creates a tailored implementation plan with clear milestones, resource requirements, and performance metrics.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Development & Integration</h3>
-            <p>We build your solution with regular checkpoints to ensure alignment with your expectations and business needs.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Training & Deployment</h3>
-            <p>Your team receives comprehensive training as we roll out the solution in a controlled, phased approach.</p>
-          </div>
-        </div>
-        <div class="process-step">
-          <div class="step-number">5</div>
-          <div class="step-content">
-            <h3>Ongoing Support</h3>
-            <p>We provide continuous maintenance, updates, and consultation to help you maximize ROI from your digital investment.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="impact-section reveal">
-    <div class="container">
-      <h2>Business Impact & Research</h2>
-      <p class="section-intro">
-        Our solutions deliver measurable results backed by industry research and case studies
-      </p>
-      
-      <div class="impact-cards">
-        <div class="impact-card" data-aos="fade-up">
-          <div class="impact-icon"><i class="fas fa-chart-pie"></i></div>
-          <h3>63% Growth with AI Adoption</h3>
-          <p>SMEs implementing AI-based automation saw up to 63% increase in operational efficiency within the first year.</p>
-          <span class="impact-source">McKinsey Digital Transformation Report, 2023</span>
-        </div>
-        <div class="impact-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="impact-icon"><i class="fas fa-bolt"></i></div>
-          <h3>90% Faster Customer Responses</h3>
-          <p>Companies using our AI chatbot frameworks cut down customer support response times by over 90%.</p>
-          <span class="impact-source">Zendesk Customer Experience Study, 2022</span>
-        </div>
-        <div class="impact-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="impact-icon"><i class="fas fa-shield-alt"></i></div>
-          <h3>80% Reduction in Security Incidents</h3>
-          <p>Businesses with AI-powered security tools experienced 80% fewer breaches than those with standard setups.</p>
-          <span class="impact-source">CyberEdge Group Security Report, 2023</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="case-studies reveal">
-    <div class="container">
-      <h2>Success Stories</h2>
-      <p class="section-intro">Real-world examples of how our solutions transformed businesses across South Africa</p>
-      
-      <div class="case-studies-slider">
-        <div class="case-study">
-          <div class="case-image">
-            <img src="/api/placeholder/400/250" alt="Print Shop Case Study" />
-          </div>
-          <div class="case-content">
-            <h3>Pretoria Print Shop</h3>
-            <p class="case-highlight">70% reduction in appointment no-shows</p>
-            <p>A family-owned print business implemented our WhatsApp-integrated AI booking system, dramatically improving scheduling efficiency and customer experience.</p>
-            <span class="case-industry">Industry: Retail Services</span>
-          </div>
-        </div>
-        <div class="case-study">
-          <div class="case-image">
-            <img src="/api/placeholder/400/250" alt="Online Boutique Case Study" />
-          </div>
-          <div class="case-content">
-            <h3>Cape Town Fashion Brand</h3>
-            <p class="case-highlight">35% increase in online conversions</p>
-            <p>Our cross-platform mobile app with AI-powered product recommendations helped this clothing brand create a personalized shopping experience for every customer.</p>
-            <span class="case-industry">Industry: E-Commerce / Fashion</span>
-          </div>
-        </div>
-        <div class="case-study">
-          <div class="case-image">
-            <img src="/api/placeholder/400/250" alt="Logistics Case Study" />
-          </div>
-          <div class="case-content">
-            <h3>Johannesburg Logistics Startup</h3>
-            <p class="case-highlight">R100,000+ annual savings</p>
-            <p>Our custom route optimization algorithm revolutionized this company's delivery operations, cutting fuel costs and reducing driver hours while improving delivery times.</p>
-            <span class="case-industry">Industry: Transportation & Logistics</span>
-          </div>
-        </div>
-      </div>
-      <div class="slider-controls">
-        <button class="prev-btn" title="Previous Slide"><i class="fas fa-chevron-left"></i></button>
-        <div class="slider-dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
-        <button class="next-btn" title="Next Slide"><i class="fas fa-chevron-right"></i></button>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section reveal">
-    <div class="container">
-      <h2>Ready to Transform Your Business?</h2>
-      <p>Schedule a free consultation to discuss how our solutions can address your specific challenges</p>
-      <div class="cta-buttons">
-        <a href="contact.html" class="btn btn-light">Book a Consultation</a>
-        <a href="why-ai.html" class="btn btn-outline">Learn More About AI</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="partners" class="partners-section reveal">
-    <div class="container">
-      <h2>Our Trusted Technology Partners</h2>
-      <div class="partners-grid">
-        <div class="partner-card">
-          <img src="assets/ktelogo.PNG" alt="Khandwele Trading Enterprise" />
-          <h4>Khandwele Trading Enterprise</h4>
-        </div>
-        <div class="partner-card">
-          <img src="assets/partner2.png" alt="Infinite Bean Group" />
-          <h4>Infinite Bean Group</h4>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Chatbot Widget -->
-  <div id="chatbot-widget" class="chatbot-bubble">
-    <script data-relevanceai-share-id="d7b62b/62dbd8a9bb24-4565-b8c3-b03b8cad0e93/fd5b5ce5-407a-46ac-9bc8-5ee7779b4186" 
-    src="https://app.relevanceai.com/embed/chat-bubble.js" data-share-styles="hide_tool_steps=false&hide_file_uploads=
-    false&hide_conversation_list=false&bubble_style=icon&primary_color=%23f7f8f7&bubble_icon=pd%2Fchat&input_placeholder_text=
-    Type+your+message...&hide_logo=false"></script>
   </div>
   
-  <footer class="main-footer">
-    &copy; 2025 NorthSide Connect. All rights reserved.
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo"><img src="assets/logo.png" alt="NorthSide Connect Logo"><p>Empowering small businesses through technology.</p></div>
+          <div class="footer-links"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="service.html">Services</a></li><li><a href="why-ai.html">Why AI?</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+          <div class="footer-contact"><h3>Contact Us</h3><ul><li><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</li><li><i class="fas fa-phone"></i> +27 (82) 4035 469</li><li><i class="fas fa-envelope"></i> nortsideconnect24@gmail.com</li></ul></div>
+          <div class="footer-social"><h3>Follow Us</h3><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 NortSide Connect. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p></div>
+      </div>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/app.js" defer></script>
 </body>
 </html>
