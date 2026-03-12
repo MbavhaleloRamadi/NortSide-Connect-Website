@@ -1,253 +1,329 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // --- Global Functionality ---
+/* ==========================================================================
+   NortSide Connect — Unified Application Script
+   ========================================================================== */
 
-  // 1. Preloader
-  const loader =
-    document.getElementById("loader") || document.getElementById("preloader");
-  if (loader) {
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ——————————————————————————————————————
+  // 1. PRELOADER
+  // ——————————————————————————————————————
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      preloader.classList.add('loaded');
+      setTimeout(() => preloader.remove(), 500);
+    });
+    // Failsafe: remove after 3s even if load event doesn't fire
     setTimeout(() => {
-      loader.style.opacity = "0";
-      setTimeout(() => {
-        loader.style.display = "none";
-      }, 500);
-    }, 800);
+      preloader.classList.add('loaded');
+      setTimeout(() => preloader.remove(), 500);
+    }, 3000);
   }
 
-  // 2. Mobile Navigation
-  const mobileToggle = document.querySelector(".mobile-toggle");
-  const navMenu = document.querySelector(".nav-menu");
-  if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-      const icon = mobileToggle.querySelector("i");
-      icon.classList.toggle("fa-bars");
-      icon.classList.toggle("fa-times");
+  // ——————————————————————————————————————
+  // 2. THEME TOGGLE (Dark / Light)
+  // ——————————————————————————————————————
+  const themeToggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
+
+  // Check saved preference or system preference
+  const savedTheme = localStorage.getItem('nortside-theme');
+  if (savedTheme) {
+    html.setAttribute('data-theme', savedTheme);
+  } else {
+    // Default to dark
+    html.setAttribute('data-theme', 'dark');
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('nortside-theme', next);
     });
   }
 
-  // 3. Sticky Header on Scroll
-  const header = document.querySelector(".main-header");
-  if (header) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
+  // ——————————————————————————————————————
+  // 3. MOBILE NAVIGATION
+  // ——————————————————————————————————————
+  const mobileToggle = document.getElementById('mobileToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener('click', () => {
+      mobileToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close on nav link click
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('#navMenu') && !e.target.closest('#mobileToggle')) {
+        mobileToggle.classList.remove('active');
+        navMenu.classList.remove('active');
       }
     });
   }
 
-  // 4. Smooth Scrolling for Internal Links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        const headerOffset = header ? header.offsetHeight : 80;
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition =
-          elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
+  // ——————————————————————————————————————
+  // 4. STICKY HEADER
+  // ——————————————————————————————————————
+  const header = document.getElementById('siteHeader');
+  if (header) {
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          header.classList.toggle('scrolled', window.scrollY > 60);
+          ticking = false;
         });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
-        // Close mobile menu after clicking a link
-        if (navMenu && navMenu.classList.contains("active")) {
-          navMenu.classList.remove("active");
-          const icon = mobileToggle.querySelector("i");
-          icon.classList.remove("fa-times");
-          icon.classList.add("fa-bars");
+  // ——————————————————————————————————————
+  // 5. SCROLL REVEAL ANIMATIONS
+  // ——————————————————————————————————————
+  const reveals = document.querySelectorAll('.reveal');
+  if (reveals.length > 0 && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback: show everything
+    reveals.forEach(el => el.classList.add('visible'));
+  }
+
+  // ——————————————————————————————————————
+  // 6. HERO COUNTER ANIMATION
+  // ——————————————————————————————————————
+  const counters = document.querySelectorAll('[data-count]');
+  if (counters.length > 0) {
+    const animateCounter = (el) => {
+      const target = parseInt(el.getAttribute('data-count'), 10);
+      const duration = 1500;
+      const start = performance.now();
+      const step = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+        el.textContent = Math.floor(ease * target);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      };
+      requestAnimationFrame(step);
+    };
+
+    if ('IntersectionObserver' in window) {
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach(el => counterObserver.observe(el));
+    } else {
+      counters.forEach(animateCounter);
+    }
+  }
+
+  // ——————————————————————————————————————
+  // 7. CHATBOT
+  // ——————————————————————————————————————
+  const chatFab = document.getElementById('chatbotFab');
+  const chatWindow = document.getElementById('chatbotWindow');
+  const chatClose = document.getElementById('chatClose');
+  const chatInput = document.getElementById('chatInput');
+  const chatSend = document.getElementById('chatSend');
+  const chatMessages = document.getElementById('chatMessages');
+
+  if (chatFab && chatWindow) {
+    chatFab.addEventListener('click', () => {
+      chatWindow.classList.add('open');
+      chatFab.style.display = 'none';
+      chatInput?.focus();
+    });
+
+    chatClose?.addEventListener('click', () => {
+      chatWindow.classList.remove('open');
+      chatFab.style.display = 'block';
+    });
+
+    const appendMsg = (sender, text) => {
+      const div = document.createElement('div');
+      div.className = `chat-message ${sender}`;
+      div.innerHTML = `<p>${text}</p>`;
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    };
+
+    const handleChat = () => {
+      const msg = chatInput.value.trim();
+      if (!msg) return;
+      appendMsg('user', msg);
+      chatInput.value = '';
+
+      setTimeout(() => {
+        const lower = msg.toLowerCase();
+        let reply;
+
+        if (/hello|hi|hey|howzit/.test(lower)) {
+          reply = 'Hello! How can I help you today?';
+        } else if (/services|offer|what do you do/.test(lower)) {
+          reply = 'We offer AI Agent Development, Mobile Apps, Cybersecurity, CIPC Registration, Tax Registration, and Graphic Design. Which one interests you?';
+        } else if (/ai|agent|chatbot|automat/.test(lower)) {
+          reply = 'Our AI solutions include custom agents, workflow automation, and analytics to optimise your operations. Want to schedule a consultation?';
+        } else if (/cipc|company reg|register/.test(lower)) {
+          reply = 'We handle full CIPC company registration — Pty Ltd, NPC, or name reservations. We\'ll take care of the paperwork so you can focus on building.';
+        } else if (/tax|sars|vat/.test(lower)) {
+          reply = 'We register businesses with SARS for Income Tax, VAT, PAYE, and UIF. Need help getting compliant?';
+        } else if (/price|cost|how much|pricing/.test(lower)) {
+          reply = 'Pricing depends on the project scope. Book a free consultation and we\'ll give you a personalised quote!';
+        } else if (/contact|email|phone|call/.test(lower)) {
+          reply = 'You can reach us at nortsideconnect24@gmail.com or call +27 (82) 4035 469.';
+        } else if (/thank/.test(lower)) {
+          reply = 'You\'re welcome! Anything else I can help with?';
+        } else if (/bye|goodbye/.test(lower)) {
+          reply = 'Cheers! Feel free to come back anytime. 👋';
+        } else {
+          reply = 'Thanks for your message! Would you like to know about our services, book a consultation, or chat with someone from the team?';
+        }
+
+        appendMsg('bot', reply);
+      }, 800);
+    };
+
+    chatSend?.addEventListener('click', handleChat);
+    chatInput?.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') handleChat();
+    });
+  }
+
+  // ——————————————————————————————————————
+  // 8. SMOOTH SCROLL FOR ANCHOR LINKS
+  // ——————————————————————————————————————
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const offset = header ? header.offsetHeight + 20 : 80;
+        const pos = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: pos, behavior: 'smooth' });
       }
     });
   });
 
-  // 5. Chatbot
-  const chatbotBubble = document.querySelector(".chatbot-bubble");
-  const chatbotContainer = document.querySelector(".chatbot-container");
-  const closeBtn = document.querySelector(".close-btn");
-  const chatInput = chatbotContainer?.querySelector(".chat-input input");
-  const sendBtn = chatbotContainer?.querySelector(".chat-input button");
-  const chatMessages = chatbotContainer?.querySelector(".chat-messages");
+  // ——————————————————————————————————————
+  // 9. FAQ ACCORDION (Contact page)
+  // ——————————————————————————————————————
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
 
-  if (chatbotBubble && chatbotContainer && closeBtn) {
-    chatbotBubble.addEventListener("click", () => {
-      chatbotContainer.style.display = "flex";
-      chatbotBubble.style.display = "none";
-    });
+      // Close others
+      document.querySelectorAll('.faq-item.active').forEach(other => {
+        if (other !== item) {
+          other.classList.remove('active');
+          other.querySelector('.faq-answer').style.maxHeight = '0';
+        }
+      });
 
-    closeBtn.addEventListener("click", () => {
-      chatbotContainer.style.display = "none";
-      chatbotBubble.style.display = "flex";
-    });
-
-    const appendMessage = (sender, text) => {
-      const msgDiv = document.createElement("div");
-      msgDiv.classList.add("chat-message", sender);
-      msgDiv.innerHTML = `<p>${text}</p>`;
-      chatMessages.appendChild(msgDiv);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    };
-
-    const handleSendMessage = () => {
-      const message = chatInput.value.trim();
-      if (message) {
-        appendMessage("user", message);
-        chatInput.value = "";
-        // Simple bot response logic
-        setTimeout(() => {
-          appendMessage(
-            "bot",
-            "Thanks for your message! An agent will be with you shortly."
-          );
-        }, 1000);
+      item.classList.toggle('active');
+      if (item.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      } else {
+        answer.style.maxHeight = '0';
       }
-    };
-
-    sendBtn.addEventListener("click", handleSendMessage);
-    chatInput.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") handleSendMessage();
     });
-  }
+  });
 
-  // 6. AOS Initialization
-  if (typeof AOS !== "undefined") {
-    AOS.init({
-      duration: 800,
-      easing: "ease-in-out",
-      once: true,
-      disable: "mobile",
-    });
-  }
-
-  // --- Page-Specific Functionality ---
-
-  // 1. Stats Counter (Index & About pages)
-  const statsContainer = document.querySelector(".stats-container");
-  if (statsContainer) {
-    const counters = statsContainer.querySelectorAll(".stat-counter");
-    const animateCounters = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          counters.forEach((counter) => {
-            counter.innerText = "0";
-            const target = +counter.getAttribute("data-target");
-            const duration = 1500;
-            const increment = target / (duration / 16);
-
-            const updateCount = () => {
-              const current = +counter.innerText;
-              if (current < target) {
-                counter.innerText = `${Math.ceil(current + increment)}`;
-                setTimeout(updateCount, 16);
-              } else {
-                counter.innerText = target;
-              }
-            };
-            updateCount();
-          });
-          observer.unobserve(statsContainer);
-        }
-      });
-    };
-    const observer = new IntersectionObserver(animateCounters, {
-      threshold: 0.5,
-    });
-    observer.observe(statsContainer);
-  }
-
-  // 2. Contact Page Form Validation & FAQ
-  const contactForm = document.getElementById("contactForm");
+  // ——————————————————————————————————————
+  // 10. CONTACT FORM (Contact page)
+  // ——————————————————————————————————————
+  const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
+    contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const formSuccess = document.getElementById("formSuccess");
-      // Basic validation success simulation
-      this.reset();
-      formSuccess.style.display = "flex";
-      setTimeout(() => (formSuccess.style.display = "none"), 4000);
+      const success = document.getElementById('formSuccess');
+      contactForm.reset();
+      if (success) {
+        success.style.display = 'block';
+        setTimeout(() => success.style.display = 'none', 4000);
+      }
     });
   }
 
-  const faqItems = document.querySelectorAll(".faq-item");
-  if (faqItems.length > 0) {
-    faqItems.forEach((item) => {
-      const question = item.querySelector(".faq-question");
-      question.addEventListener("click", () => {
-        const answer = item.querySelector(".faq-answer");
-        const icon = question.querySelector("i");
-
-        item.classList.toggle("active");
-        if (item.classList.contains("active")) {
-          answer.style.maxHeight = answer.scrollHeight + "px";
-          icon.style.transform = "rotate(180deg)";
-        } else {
-          answer.style.maxHeight = "0";
-          icon.style.transform = "rotate(0deg)";
-        }
+  // ——————————————————————————————————————
+  // 11. TABS (Services / Why AI pages)
+  // ——————————————————————————————————————
+  document.querySelectorAll('.service-tabs, .research-tabs').forEach(tabGroup => {
+    const buttons = tabGroup.querySelectorAll('.tab-btn');
+    const parentSection = tabGroup.closest('section') || document;
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.dataset.target || btn.dataset.tab;
+        buttons.forEach(b => b.classList.remove('active'));
+        parentSection.querySelectorAll('.tab-content, .tab-panel').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) targetEl.classList.add('active');
       });
     });
-  }
+  });
 
-  // 3. Services Page: Tabs and Slider
-  const serviceTabs = document.querySelector(".service-tabs");
-  if (serviceTabs) {
-    const tabButtons = serviceTabs.querySelectorAll(".tab-btn");
-    const tabContents = document.querySelectorAll(".tab-content");
-    tabButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        tabButtons.forEach((btn) => btn.classList.remove("active"));
-        tabContents.forEach((content) => content.classList.remove("active"));
-        button.classList.add("active");
-        document.getElementById(button.dataset.target).classList.add("active");
-      });
+  // ——————————————————————————————————————
+  // 12. MODALS (Why AI page)
+  // ——————————————————————————————————————
+  document.querySelectorAll('[data-modal]').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modal = document.getElementById(trigger.getAttribute('data-modal'));
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
     });
-  }
+  });
 
-  const caseStudySlider = document.querySelector(".case-studies-slider");
-  if (caseStudySlider) {
-    // Basic slider functionality can be added here if needed.
-    // For now, it's a static display.
-  }
-
-  // 4. Why AI Page: Modals and Tabs
-  const benefitLinks = document.querySelectorAll(".benefit-link");
-  if (benefitLinks.length > 0) {
-    benefitLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const modalId = link.getAttribute("data-modal");
-        const modal = document.getElementById(modalId);
-        if (modal) modal.style.display = "flex";
-      });
+  document.querySelectorAll('.close-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modal = btn.closest('.modal-container');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
     });
+  });
 
-    document.querySelectorAll(".modal-container").forEach((modal) => {
-      modal.querySelector(".close-modal").addEventListener("click", () => {
-        modal.style.display = "none";
-      });
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-          modal.style.display = "none";
-        }
-      });
+  document.querySelectorAll('.modal-container').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     });
-  }
+  });
 
-  const researchTabs = document.querySelector(".research-tabs");
-  if (researchTabs) {
-    const tabButtons = researchTabs.querySelectorAll(".tabs-nav .tab-btn");
-    const tabPanels = researchTabs.querySelectorAll(".tabs-content .tab-panel");
-    tabButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        tabButtons.forEach((btn) => btn.classList.remove("active"));
-        tabPanels.forEach((panel) => panel.classList.remove("active"));
-        button.classList.add("active");
-        document.getElementById(button.dataset.tab).classList.add("active");
-      });
-    });
-  }
 });

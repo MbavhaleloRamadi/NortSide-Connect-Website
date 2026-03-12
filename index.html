@@ -1,284 +1,348 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NortSide Connect - Empowering Small Businesses through B2B AI Solutions, Mobile App Development, and Cybersecurity Services.">
-  <meta name="keywords" content="AI, B2B, Small Business, Mobile App Development, Cybersecurity, System Training">
-  <meta name="author" content="NorthSide Connect">
-  <title>NortSide Connect</title>
+  <meta name="description" content="NortSide Connect — AI agents, software development, CIPC registration & business services for South African SMEs. Based in Pretoria.">
+  <meta name="keywords" content="AI Agents, Software Development, CIPC Registration, Mobile Apps, Cybersecurity, Pretoria, South Africa">
+  <meta name="author" content="NortSide Connect">
+  <title>NortSide Connect — AI & Software Solutions for SMEs</title>
   <link rel="stylesheet" href="css/main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
-  <meta name="google-adsense-account" content="ca-pub-7404613766674161">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
+  <!-- Preloader -->
   <div id="preloader">
-    <div class="loader">
-      <img src="assets/logo.png" alt="NorthSide Connect Logo" class="loader-logo" />
-      <div class="loader-bar"></div>
+    <div class="preloader-inner">
+      <div class="preloader-logo">NortSide<span class="text-accent">.</span></div>
+      <div class="preloader-bar"><span></span></div>
     </div>
   </div>
 
-  <header class="main-header">
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
     <div class="container">
-      <a href="index.html" aria-label="NorthSide Connect Home">
-        <img src="assets/logo.png" alt="NorthSide Connect Logo" class="logo" />
+      <a href="index.html" class="logo-link" aria-label="NortSide Connect Home">
+        <div class="logo-mark">N</div>
+        <span>NortSide<span class="text-accent">.</span></span>
       </a>
-      <nav class="nav-menu" aria-label="Main Navigation">
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
         <ul>
-          <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="about.html"><i class="far fa-compass"></i> About Us</a></li>
-          <li><a href="service.html"><i class="fas fa-laptop-code"></i> Services</a></li>
-          <li><a href="why-ai.html"><i class="fas fa-microchip"></i> Why AI?</a></li>
-          <li><a href="contact.html"><i class="far fa-comment-dots"></i> Contact</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why-ai.html">Why AI?</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <div class="mobile-toggle">
-        <i class="fas fa-bars"></i>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun icon-sun"></i>
+          <i class="fas fa-moon icon-moon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero-section" data-aos="fade-in">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
       <div class="container">
         <div class="hero-content">
-          <h1>Small Businesses A.I Solutions</h1>
-          <p>Modern B2B AI, Mobile Development, and Cybersecurity tailored for you.</p>
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            Based in Pretoria, built for Africa
+          </div>
+          <h1>We build <span class="text-gradient">AI-powered</span> software for growing businesses</h1>
+          <p>From custom AI agents to CIPC company registration — NortSide Connect helps South African SMEs compete with enterprise-grade technology at accessible prices.</p>
           <div class="cta-buttons">
-            <a href="service.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Explore Services</a>
-            <a href="contact.html" class="btn btn-outline btn-light"><i class="fas fa-phone-alt"></i> Get in Touch</a>
+            <a href="services.html" class="btn btn-primary btn-lg">Explore services <i class="fas fa-arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-outline btn-lg">Book a free consult</a>
           </div>
         </div>
-        <div class="hero-image">
-          <img src="assets/logo.png" alt="A.I Business Transformation" />
-        </div>
-      </div>
-    </section>
 
-    <section class="stats-section">
-      <div class="container">
-        <div class="stats-container">
-          <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-            <i class="fas fa-project-diagram"></i>
-            <div class="stat-counter" data-target="5">0</div>
-            <h3>Projects Completed</h3>
+        <div class="hero-metrics">
+          <div class="hero-metric">
+            <span class="number" data-count="5">0</span>
+            <span class="label">Projects delivered</span>
           </div>
-          <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-            <i class="fas fa-handshake"></i>
-            <div class="stat-counter" data-target="5">0</div>
-            <h3>Happy Clients</h3>
+          <div class="hero-metric">
+            <span class="number" data-count="5">0</span>
+            <span class="label">Happy clients</span>
           </div>
-          <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-            <i class="fas fa-code"></i>
-            <div class="stat-counter" data-target="25000">0</div>
-            <h3>Lines of Code</h3>
-          </div>
-          <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-            <i class="fas fa-coffee"></i>
-            <div class="stat-counter" data-target="1000">0</div>
-            <h3>Cups of Coffee</h3>
+          <div class="hero-metric">
+            <span class="number">100<span class="text-accent">%</span></span>
+            <span class="label">Client retention</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="services-section" id="services">
+    <!-- Services -->
+    <section id="services">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Our Services</h2>
-          <p>Comprehensive digital solutions to propel your business forward.</p>
+        <div class="section-header centered">
+          <span class="section-label">What we do</span>
+          <h2>Core &amp; business services</h2>
+          <p>End-to-end solutions — from AI agent development to getting your business legally registered and running.</p>
         </div>
-        
-        <div class="services-grid">
-          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-icon">
-              <i class="fas fa-robot"></i>
-            </div>
-            <h3>B2B AI Solutions</h3>
-            <p>Custom AI chatbots, automation systems, and analytics to optimize workflows and reduce costs.</p>
-            <a href="service.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+
+        <div class="grid grid-3">
+          <!-- Core services -->
+          <div class="service-card reveal">
+            <span class="service-tag core">Core</span>
+            <div class="service-icon-wrap"><i class="fas fa-robot"></i></div>
+            <h3>B2B AI Agents &amp; Automation</h3>
+            <p>Custom AI chatbots, workflow automation, and predictive analytics that reduce costs and scale your operations.</p>
+            <a href="services.html" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
           </div>
-          
-          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-icon">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
+
+          <div class="service-card reveal reveal-delay-1">
+            <span class="service-tag core">Core</span>
+            <div class="service-icon-wrap"><i class="fas fa-mobile-alt"></i></div>
             <h3>Mobile App Development</h3>
-            <p>Cross-platform apps built with scalability and user experience at the core.</p>
-            <a href="service.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            <p>Cross-platform apps engineered for performance, with user experience that keeps customers coming back.</p>
+            <a href="services.html" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
           </div>
-          
-          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-icon">
-              <i class="fas fa-shield-alt"></i>
-            </div>
+
+          <div class="service-card reveal reveal-delay-2">
+            <span class="service-tag core">Core</span>
+            <div class="service-icon-wrap"><i class="fas fa-shield-alt"></i></div>
             <h3>AI-Powered Cybersecurity</h3>
-            <p>Proactive AI systems that monitor, detect, and respond to threats in real-time.</p>
-            <a href="service.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            <p>Proactive threat detection and real-time response systems that protect your business around the clock.</p>
+            <a href="services.html" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
           </div>
-          
-          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <h3>System Training</h3>
-            <p>We train your team to effectively run, scale, and troubleshoot your new systems.</p>
-            <a href="service.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+
+          <div class="service-card reveal">
+            <span class="service-tag core">Core</span>
+            <div class="service-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+            <h3>System Implementation Training</h3>
+            <p>Hands-on training so your team can confidently run, scale, and troubleshoot your new systems.</p>
+            <a href="services.html" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Secondary / add-on services -->
+          <div class="service-card reveal reveal-delay-1">
+            <span class="service-tag addon">Business</span>
+            <div class="service-icon-wrap" style="background: rgba(245,158,11,0.12);"><i class="fas fa-building" style="color: var(--secondary);"></i></div>
+            <h3>CIPC Company Registration</h3>
+            <p>We handle your Pty Ltd, NPC, or name reservation with CIPC — hassle-free, so you can focus on building your business.</p>
+            <a href="services.html" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="service-card reveal reveal-delay-2">
+            <span class="service-tag addon">Business</span>
+            <div class="service-icon-wrap" style="background: rgba(245,158,11,0.12);"><i class="fas fa-file-invoice-dollar" style="color: var(--secondary);"></i></div>
+            <h3>Tax &amp; SARS Registration</h3>
+            <p>Income tax, VAT, PAYE, UIF — we register your business with SARS and keep you compliant from day one.</p>
+            <a href="services.html" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Extra row for remaining services -->
+        <div class="grid grid-3" style="margin-top: var(--space-lg);">
+          <div class="service-card reveal">
+            <span class="service-tag addon">Business</span>
+            <div class="service-icon-wrap" style="background: rgba(245,158,11,0.12);"><i class="fas fa-palette" style="color: var(--secondary);"></i></div>
+            <h3>Graphic Design &amp; Branding</h3>
+            <p>Logos, brand identity systems, social media assets, and marketing materials that make your business unforgettable.</p>
+            <a href="services.html" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="about-section">
+    <!-- About / Who We Are -->
+    <section class="about-section" style="background: var(--bg-raised);">
       <div class="container">
-        <div class="about-wrapper">
-          <div class="about-content" data-aos="fade-right">
-            <div class="section-header">
-              <h2>Who We Are</h2>
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="visual-card">
+              <img src="assets/director.JPG" alt="Mbavhalelo Innocent Ramadi — Founder & CEO" class="founder-img" />
+              <p class="founder-name">Mbavhalelo Innocent Ramadi</p>
+              <p class="founder-role">Founder &amp; CEO</p>
             </div>
-            <p>NortSide Connect was founded with a clear mission: to empower small businesses through cutting-edge digital solutions that were previously only accessible to large corporations.</p>
-            <p>Our team combines technical expertise with a deep understanding of business challenges to deliver solutions that drive real results.</p>
-            <a href="about.html" class="btn btn-primary"><i class="fas fa-users"></i> Meet Our Team</a>
           </div>
-          <div class="about-image" data-aos="fade-left">
-            <img src="assets/director.JPG" alt="Mbavhalelo Innocent Ramadi">
-            <div class="team-info">
-              <h3>Mbavhalelo Innocent Ramadi</h3>
-              <p>Director</p>
+
+          <div class="about-text reveal reveal-delay-1">
+            <span class="section-label">Who we are</span>
+            <h2>Born in the AI revolution, built for small business</h2>
+            <p>Founded in 2024, NortSide Connect was created with one mission: to give South African SMEs access to the same powerful technology that large corporations use — at prices that make sense.</p>
+            <p>We're not just a tech vendor. We're a partner that understands the real challenges of running a business in South Africa — from navigating CIPC paperwork to implementing AI that actually moves the needle.</p>
+            <div class="values-row">
+              <div class="value-item">
+                <div class="v-icon"><i class="fas fa-lightbulb"></i></div>
+                <div>
+                  <h4>Practical First</h4>
+                  <p>Solutions that work today, not theoretical possibilities.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="v-icon"><i class="fas fa-handshake"></i></div>
+                <div>
+                  <h4>True Partnership</h4>
+                  <p>Your success is our success. We're invested long-term.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="v-icon"><i class="fas fa-lock"></i></div>
+                <div>
+                  <h4>Security Built In</h4>
+                  <p>Every solution is designed with protection at its core.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="v-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <h4>Proudly Local</h4>
+                  <p>Based in Pretoria, serving businesses across SA.</p>
+                </div>
+              </div>
+            </div>
+            <div class="cta-buttons">
+              <a href="about.html" class="btn btn-outline">Our full story <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Journey / Timeline -->
     <section class="timeline-section">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Our Journey</h2>
-          <p>The milestones that define our growth</p>
+        <div class="section-header centered">
+          <span class="section-label">Our journey</span>
+          <h2>Key milestones</h2>
         </div>
-        
+
         <div class="timeline">
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-icon"><i class="fas fa-flag"></i></div>
-            <div class="timeline-content">
-              <h3>2024 - Foundation</h3>
-              <p>NortSide Connect is founded with a mission to uplift small businesses through digital solutions.</p>
-            </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <span class="year">2024 — Q1</span>
+            <h3>Foundation</h3>
+            <p>NortSide Connect launches with a mission to democratise technology for SMEs.</p>
           </div>
-          
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-icon"><i class="fas fa-code"></i></div>
-            <div class="timeline-content">
-              <h3>2024 - Web Services</h3>
-              <p>Launched our Web Development services, building a strong online presence for our first clients.</p>
-            </div>
+          <div class="timeline-item reveal reveal-delay-1">
+            <div class="timeline-dot"></div>
+            <span class="year">2024 — Q3</span>
+            <h3>First web clients</h3>
+            <p>Delivered web development services and built a secure website for KTE Security.</p>
           </div>
-          
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-icon"><i class="fas fa-shield-alt"></i></div>
-            <div class="timeline-content">
-              <h3>2024 - Security Expansion</h3>
-              <p>Expanded into cybersecurity and developed a secure website for KTE Security.</p>
-            </div>
+          <div class="timeline-item reveal reveal-delay-2">
+            <div class="timeline-dot"></div>
+            <span class="year">2024 — Q4</span>
+            <h3>Cybersecurity expansion</h3>
+            <p>Expanded into AI-powered cybersecurity monitoring and threat detection.</p>
           </div>
-          
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-icon"><i class="fas fa-robot"></i></div>
-            <div class="timeline-content">
-              <h3>2025 - AI Integration</h3>
-              <p>Launched our AI Services (Cybersecurity, Business Automation & AI Agents).</p>
-            </div>
+          <div class="timeline-item reveal reveal-delay-3">
+            <div class="timeline-dot"></div>
+            <span class="year">2025</span>
+            <h3>AI agents &amp; business services</h3>
+            <p>Launched AI agent development, CIPC registration, and SARS tax services for a full business ecosystem.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- CTA -->
     <section class="cta-section">
       <div class="container">
-        <div class="cta-content" data-aos="zoom-in">
-          <h2>Ready to transform your business?</h2>
-          <p>Let's discuss how our technologies can help you achieve your goals.</p>
-          <a href="contact.html" class="btn btn-light"><i class="fas fa-paper-plane"></i> Get Started</a>
+        <div class="section-header centered" style="margin-bottom: var(--space-lg);">
+          <h2>Ready to build something<br class="hide-mobile"> <span class="text-gradient">that matters?</span></h2>
+          <p>Whether you need an AI agent, a mobile app, or help registering your company — let's talk.</p>
+        </div>
+        <div class="cta-buttons" style="justify-content: center;">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Get in touch</a>
+          <a href="services.html" class="btn btn-outline btn-lg">View all services</a>
         </div>
       </div>
     </section>
   </main>
-  
-  <div class="chatbot-bubble">
-    <div class="chatbot-icon">
-      <i class="fas fa-comments"></i>
-    </div>
+
+  <!-- Chatbot -->
+  <div class="chatbot-fab" id="chatbotFab">
+    <button aria-label="Open chat"><i class="fas fa-comments"></i></button>
   </div>
-  <div class="chatbot-container">
-    <div class="chatbot-header">
-      <h3><i class="fas fa-robot"></i> NortSide Assistant</h3>
-      <button class="close-btn" title="Close chatbot"><i class="fas fa-times"></i></button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-win-header">
+      <h4><i class="fas fa-robot"></i> NortSide Assistant</h4>
+      <button class="close-chat" id="chatClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
     </div>
-    <div class="chatbot-body">
-      <div class="chat-messages">
-        <div class="chat-message bot"><p>Hello! I'm the NortSide virtual assistant. How can I help you today?</p></div>
-      </div>
-      <div class="chat-input">
-        <input type="text" placeholder="Type your message..." aria-label="Type your message">
-        <button aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
-      </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-message bot"><p>Hi! I'm the NortSide assistant. How can I help you today?</p></div>
+    </div>
+    <div class="chat-input-wrap">
+      <input type="text" id="chatInput" placeholder="Type a message..." aria-label="Type a message" />
+      <button id="chatSend" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
     </div>
   </div>
 
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="assets/logo.png" alt="NorthSide Connect Logo">
-          <p>Empowering small businesses through technology.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link" style="margin-bottom: 0;">
+            <div class="logo-mark">N</div>
+            <span>NortSide<span class="text-accent">.</span></span>
+          </a>
+          <p>Making advanced technology accessible to businesses of all sizes across South Africa.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
-        
-        <div class="footer-links">
-          <h3>Quick Links</h3>
+
+        <div>
+          <h4>Navigation</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="service.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="why-ai.html">Why AI?</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        
-        <div class="footer-contact">
-          <h3>Contact Us</h3>
+
+        <div>
+          <h4>Services</h4>
           <ul>
-            <li><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</li>
-            <li><i class="fas fa-phone"></i> +27 (82) 4035 469</li>
-            <li><i class="fas fa-envelope"></i> nortsideconnect24@gmail.com</li>
+            <li><a href="services.html">AI Agents</a></li>
+            <li><a href="services.html">Mobile Apps</a></li>
+            <li><a href="services.html">Cybersecurity</a></li>
+            <li><a href="services.html">CIPC Registration</a></li>
+            <li><a href="services.html">Tax Registration</a></li>
           </ul>
         </div>
-        
-        <div class="footer-social">
-          <h3>Follow Us</h3>
-          <div class="social-icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
+
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i> +27 (82) 4035 469</div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i> nortsideconnect24@gmail.com</div>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
-        <p>&copy; 2025 NortSide Connect. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p>&copy; 2025 NortSide Connect. All rights reserved.</p>
+        <div>
+          <a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="js/app.js" defer></script>
 </body>
-
 </html>
