@@ -1,272 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Discover NorthSide Connect's journey - From vision to innovation, empowering small businesses with accessible technology solutions">
-  <meta name="keywords"
-    content="Tech Innovation, Business Solutions, AI Implementation, Digital Growth Partner, SMB Technology">
-  <meta name="author" content="NorthSide Connect">
-  <title>Our Journey | NortSide Connect</title>
+  <meta name="description" content="NortSide Connect's story — from vision to innovation, empowering South African small businesses with accessible AI and technology solutions.">
+  <meta name="author" content="NortSide Connect">
+  <title>About Us — NortSide Connect</title>
   <link rel="stylesheet" href="css/main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
-  <meta name="google-adsense-account" content="ca-pub-7404613766674161">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
-  <div id="loader">
-    <div class="loader">
-      <img src="assets/logo.png" alt="NorthSide Connect Logo" class="loader-logo" />
-      <div class="loader-bar"></div>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">NortSide<span class="text-accent">.</span></div>
+      <div class="preloader-bar"><span></span></div>
     </div>
   </div>
 
-  <header class="main-header">
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
     <div class="container">
-      <a href="index.html" aria-label="NorthSide Connect Home">
-        <img src="assets/logo.png" alt="NorthSide Connect Logo" class="logo" />
+      <a href="index.html" class="logo-link" aria-label="NortSide Connect Home">
+        <div class="logo-mark">N</div>
+        <span>NortSide<span class="text-accent">.</span></span>
       </a>
-      <nav class="nav-menu" aria-label="Main Navigation">
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
         <ul>
-          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="about.html" class="active"><i class="far fa-compass"></i> About Us</a></li>
-          <li><a href="service.html"><i class="fas fa-laptop-code"></i> Services</a></li>
-          <li><a href="why-ai.html"><i class="fas fa-microchip"></i> Why AI?</a></li>
-          <li><a href="contact.html"><i class="far fa-comment-dots"></i> Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why-ai.html">Why AI?</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <div class="mobile-toggle">
-        <i class="fas fa-bars"></i>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun icon-sun"></i>
+          <i class="fas fa-moon icon-moon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero-section"
-      style="background-image: linear-gradient(rgba(52, 152, 219, 0.85), rgba(44, 62, 80, 0.9)), url('assets/about-bg.jpg'); background-size: cover; background-position: center center;">
+    <!-- Hero -->
+    <section class="hero" style="min-height: 60vh;">
+      <div class="hero-orb hero-orb-1"></div>
       <div class="container">
-        <div class="hero-content" data-aos="fade-up">
-          <h1>Pioneering Digital Growth</h1>
-          <p>Breaking down technological barriers for small businesses.</p>
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            Our story
+          </div>
+          <h1>Pioneering <span class="text-gradient">digital growth</span> for small business</h1>
+          <p>We believe every business — no matter the size — deserves access to technology that was once reserved for the enterprise world.</p>
           <div class="cta-buttons">
-            <a href="#our-story" class="btn btn-light"><i class="fas fa-book-open"></i> Our Story</a>
-            <a href="contact.html" class="btn btn-outline btn-light"><i class="fas fa-handshake"></i> Partner With
-              Us</a>
+            <a href="#origin" class="btn btn-primary">Read our story <i class="fas fa-arrow-down"></i></a>
+            <a href="contact.html" class="btn btn-outline">Partner with us</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="our-story" class="about-section">
+    <!-- Origin -->
+    <section id="origin">
       <div class="container">
-        <div class="about-wrapper">
-          <div class="about-content" data-aos="fade-right">
-            <div class="section-header">
-              <h2>Our Origin Story</h2>
-            </div>
-            <p>Founded in the midst of the 2024 A.I revolution, NortSide Connect emerged with a singular vision: to
-              democratize advanced technology for small and medium businesses.</p>
-            <p>We've witnessed firsthand how the right technology can transform a struggling business into a market
-              leader. This drives our mission to create solutions that are not just innovative, but immediately valuable
-              and practical for real-world business challenges.</p>
-            <div class="cta-buttons" style="margin-top: 25px;">
-              <a href="#journey" class="btn btn-primary"><i class="fas fa-history"></i> See Our Journey</a>
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="visual-card">
+              <img src="assets/director.JPG" alt="Mbavhalelo Ramadi — Founder" class="founder-img" />
+              <p class="founder-name">Mbavhalelo Ramadi</p>
+              <p class="founder-role">Founder &amp; CEO</p>
             </div>
           </div>
-          <div class="about-image" data-aos="fade-left">
-            <img src="assets/logo.png" alt="Company Vision">
+          <div class="about-text reveal reveal-delay-1">
+            <span class="section-label">Origin story</span>
+            <h2>Born in the 2024 A.I. revolution</h2>
+            <p>NortSide Connect emerged with a singular vision: to democratise advanced technology for small and medium businesses in South Africa.</p>
+            <p>Having seen firsthand how the right tech transforms a struggling business into a market leader, our founder set out to create solutions that aren't just innovative — they're immediately valuable and practical for real-world challenges.</p>
+            <p>Today, we serve clients across multiple industries with integrated solutions ranging from AI agent development to CIPC company registration — everything a growing business needs under one roof.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="purpose-section" style="background-color: #f7f8fa;">
+    <!-- Purpose / Values -->
+    <section style="background: var(--bg-raised);">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Our Purpose</h2>
-          <p>Every day, we strive to level the digital playing field for small businesses through accessible innovation.
-          </p>
+        <div class="section-header centered">
+          <span class="section-label">Our purpose</span>
+          <h2>What drives us every day</h2>
+          <p>We strive to level the digital playing field through accessible innovation.</p>
         </div>
 
-        <div class="services-grid">
-          <div class="value-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="value-icon"><i class="far fa-lightbulb"></i></div>
+        <div class="grid grid-3">
+          <div class="service-card reveal" style="text-align: center;">
+            <div class="service-icon-wrap" style="margin-left: auto; margin-right: auto;"><i class="far fa-lightbulb"></i></div>
             <h3>Practical Innovation</h3>
-            <p>We transform complex technology into practical tools that drive measurable business results, focusing on
-              solutions that matter today.</p>
+            <p>Complex technology transformed into practical tools that drive measurable results — solutions that matter today, not theoretical tomorrow.</p>
           </div>
-
-          <div class="value-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="value-icon"><i class="fas fa-users"></i></div>
+          <div class="service-card reveal reveal-delay-1" style="text-align: center;">
+            <div class="service-icon-wrap" style="margin-left: auto; margin-right: auto;"><i class="fas fa-users"></i></div>
             <h3>Collaborative Partnership</h3>
-            <p>We're more than service providers—we're genuine partners invested in your long-term success, growth, and
-              technological evolution.</p>
+            <p>We're more than service providers. We're genuine partners invested in your long-term success, growth, and technological evolution.</p>
           </div>
-
-          <div class="value-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="value-icon"><i class="fas fa-lock"></i></div>
+          <div class="service-card reveal reveal-delay-2" style="text-align: center;">
+            <div class="service-icon-wrap" style="margin-left: auto; margin-right: auto;"><i class="fas fa-lock"></i></div>
             <h3>Security by Design</h3>
-            <p>Digital protection is woven into everything we create, ensuring your business assets remain secure as you
-              embrace new technologies.</p>
+            <p>Digital protection is woven into everything we create, ensuring your business assets remain secure as you embrace new technologies.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="team-section">
+    <!-- Team -->
+    <section>
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>The Minds Behind NortSide</h2>
-          <p>Meet the passionate experts driving our mission forward.</p>
+        <div class="section-header centered">
+          <span class="section-label">The team</span>
+          <h2>The minds behind NortSide</h2>
+          <p>Passionate experts driving our mission forward.</p>
         </div>
 
-        <div class="services-grid">
-          <div class="team-member" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/director.JPG" alt="Team Member" class="member-image"
-              style="aspect-ratio: 1/1; object-fit: cover; border-radius: 50%; width: 150px; height: 150px; margin: 0 auto 20px; border: 4px solid var(--primary-color);">
+        <div style="max-width: 380px; margin: 0 auto;">
+          <div class="team-card reveal">
+            <img src="assets/director.JPG" alt="Mbavhalelo Ramadi" />
             <h3>Mbavhalelo Ramadi</h3>
-            <p class="role" style="color: var(--primary-color); font-weight: 500;">Founder & CEO</p>
-            <p>Former enterprise tech consultant who saw the potential to bring Fortune 500 technology to small
-              businesses at accessible price points.</p>
+            <p class="role">Founder &amp; CEO</p>
+            <p style="font-size: 0.9rem;">Former enterprise tech consultant who saw the potential to bring Fortune 500 technology to small businesses at accessible price points.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="journey" class="timeline-section" style="background-color: #f7f8fa;">
+    <!-- Timeline -->
+    <section class="timeline-section">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Our Evolution</h2>
-          <p>The key milestones that shaped who we are today.</p>
+        <div class="section-header centered">
+          <span class="section-label">Our evolution</span>
+          <h2>Key milestones that shaped us</h2>
         </div>
 
         <div class="timeline">
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-icon"><i class="fas fa-rocket"></i></div>
-            <div class="timeline-content">
-              <h3>2024: Taking Flight</h3>
-              <p>Launched NortSide Connect with a mission to democratize technology for SMBs.</p>
-            </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <span class="year">2024</span>
+            <h3>Taking Flight</h3>
+            <p>Launched NortSide Connect with a mission to democratise technology for SMBs.</p>
           </div>
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-icon"><i class="fas fa-brain"></i></div>
-            <div class="timeline-content">
-              <h3>2025: The AI Breakthrough</h3>
-              <p>Developed our flagship AI-powered inventory management system, making predictive analytics accessible
-                to all.</p>
-            </div>
+          <div class="timeline-item reveal reveal-delay-1">
+            <div class="timeline-dot"></div>
+            <span class="year">Early 2025</span>
+            <h3>The AI Breakthrough</h3>
+            <p>Developed our flagship AI-powered systems, making predictive analytics accessible to small businesses.</p>
           </div>
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-icon"><i class="fas fa-trophy"></i></div>
-            <div class="timeline-content">
-              <h3>2025: Recognition & Growth</h3>
-              <p>Named "Regional Innovator of the Year" and expanded our team with specialized experts.</p>
-            </div>
+          <div class="timeline-item reveal reveal-delay-2">
+            <div class="timeline-dot"></div>
+            <span class="year">Mid 2025</span>
+            <h3>Business Services Expansion</h3>
+            <p>Added CIPC registration, SARS tax services, and graphic design to create a full-service business ecosystem.</p>
           </div>
-          <div class="timeline-item" data-aos="fade-up">
-            <div class="timeline-icon"><i class="fas fa-chart-line"></i></div>
-            <div class="timeline-content">
-              <h3>2025: Today & Beyond</h3>
-              <p>Currently serving clients across multiple industries with a suite of integrated, enterprise-grade
-                solutions.</p>
-            </div>
+          <div class="timeline-item reveal reveal-delay-3">
+            <div class="timeline-dot"></div>
+            <span class="year">Today &amp; Beyond</span>
+            <h3>Growing the Vision</h3>
+            <p>Serving clients across multiple industries with integrated, enterprise-grade solutions at SME-friendly prices.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- CTA -->
     <section class="cta-section">
       <div class="container">
-        <div class="cta-content" data-aos="zoom-in">
-          <h2>Ready to Write Your Success Story?</h2>
+        <div class="section-header centered" style="margin-bottom: var(--space-lg);">
+          <h2>Ready to write your <span class="text-gradient">success story?</span></h2>
           <p>Let's explore how NortSide Connect can transform your business challenges into digital opportunities.</p>
-          <div class="cta-buttons">
-            <a href="contact.html" class="btn btn-light"><i class="fas fa-comments"></i> Start the Conversation</a>
-            <a href="service.html" class="btn btn-outline btn-light"><i class="fas fa-th"></i> Browse Our Solutions</a>
-          </div>
+        </div>
+        <div class="cta-buttons" style="justify-content: center;">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-comments"></i> Start the conversation</a>
+          <a href="services.html" class="btn btn-outline btn-lg">Browse our solutions</a>
         </div>
       </div>
     </section>
   </main>
 
-  <div class="chatbot-bubble">
-    <div class="chatbot-icon">
-      <i class="fas fa-comments"></i>
-    </div>
+  <!-- Chatbot -->
+  <div class="chatbot-fab" id="chatbotFab">
+    <button aria-label="Open chat"><i class="fas fa-comments"></i></button>
   </div>
-  <div class="chatbot-container">
-    <div class="chatbot-header">
-      <h3><i class="fas fa-robot"></i> NortSide Assistant</h3>
-      <button class="close-btn" title="Close chatbot"><i class="fas fa-times"></i></button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-win-header">
+      <h4><i class="fas fa-robot"></i> NortSide Assistant</h4>
+      <button class="close-chat" id="chatClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
     </div>
-    <div class="chatbot-body">
-      <div class="chat-messages">
-        <div class="chat-message bot">
-          <p>Hello! I'm the NortSide virtual assistant. How can I help you today?</p>
-        </div>
-      </div>
-      <div class="chat-input">
-        <input type="text" placeholder="Type your message..." aria-label="Type your message">
-        <button aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
-      </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-message bot"><p>Hi! I'm the NortSide assistant. How can I help you today?</p></div>
+    </div>
+    <div class="chat-input-wrap">
+      <input type="text" id="chatInput" placeholder="Type a message..." aria-label="Type a message" />
+      <button id="chatSend" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
     </div>
   </div>
 
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="assets/logo.png" alt="NorthSide Connect Logo">
-          <p>Making advanced technology accessible to businesses of all sizes.</p>
-        </div>
-
-        <div class="footer-links">
-          <h3>Navigation</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="why-ai.html">Why AI?</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-contact">
-          <h3>Contact Us</h3>
-          <ul>
-            <li><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</li>
-            <li><i class="fas fa-phone"></i> +27 (82) 4035 469</li>
-            <li><i class="fas fa-envelope"></i> nortsideconnect24@gmail.com</li>
-          </ul>
-        </div>
-
-        <div class="footer-social">
-          <h3>Stay Connected</h3>
-          <div class="social-icons">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link" style="margin-bottom: 0;">
+            <div class="logo-mark">N</div>
+            <span>NortSide<span class="text-accent">.</span></span>
+          </a>
+          <p>Making advanced technology accessible to businesses of all sizes across South Africa.</p>
+          <div class="social-links">
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="why-ai.html">Why AI?</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">AI Agents</a></li>
+            <li><a href="services.html">Mobile Apps</a></li>
+            <li><a href="services.html">Cybersecurity</a></li>
+            <li><a href="services.html">CIPC Registration</a></li>
+            <li><a href="services.html">Tax Registration</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i> +27 (82) 4035 469</div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i> nortsideconnect24@gmail.com</div>
+        </div>
       </div>
-
       <div class="footer-bottom">
-        <p>&copy; 2025 NortSide Connect. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
-            Service</a></p>
+        <p>&copy; 2025 NortSide Connect. All rights reserved.</p>
+        <div><a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a></div>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="js/app.js" defer></script>
 </body>
-
 </html>
