@@ -1,123 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact NorthSide Connect - Expert B2B AI Solutions, Mobile App Development, and Cybersecurity Services for Small Businesses">
-  <meta name="keywords" content="AI Consultation, B2B Solutions, Contact, Small Business Support, Mobile App Development, Cybersecurity, System Training">
-  <meta name="author" content="NorthSide Connect">
-  <title>Contact Us | NortSide Connect</title>
+  <meta name="description" content="Get in touch with NortSide Connect — AI solutions, software development, CIPC registration & business services in Pretoria, South Africa.">
+  <meta name="author" content="NortSide Connect">
+  <title>Contact Us — NortSide Connect</title>
   <link rel="stylesheet" href="css/main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
-  <meta name="google-adsense-account" content="ca-pub-7404613766674161">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
-  <div id="loader">
-    <div class="loader">
-      <img src="assets/logo.png" alt="NorthSide Connect Logo" class="loader-logo" />
-      <div class="loader-bar"></div>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">NortSide<span class="text-accent">.</span></div>
+      <div class="preloader-bar"><span></span></div>
     </div>
   </div>
 
-  <header class="main-header">
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
     <div class="container">
-      <a href="index.html" aria-label="NorthSide Connect Home">
-        <img src="assets/logo.png" alt="NorthSide Connect Logo" class="logo" />
+      <a href="index.html" class="logo-link" aria-label="NortSide Connect Home">
+        <div class="logo-mark">N</div>
+        <span>NortSide<span class="text-accent">.</span></span>
       </a>
-      <nav class="nav-menu" aria-label="Main Navigation">
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
         <ul>
-          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="about.html"><i class="far fa-compass"></i> About Us</a></li>
-          <li><a href="service.html"><i class="fas fa-laptop-code"></i> Services</a></li>
-          <li><a href="why-ai.html"><i class="fas fa-microchip"></i> Why AI?</a></li>
-          <li><a href="contact.html" class="active"><i class="far fa-comment-dots"></i> Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why-ai.html">Why AI?</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
-      <div class="mobile-toggle">
-        <i class="fas fa-bars"></i>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun icon-sun"></i>
+          <i class="fas fa-moon icon-moon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero-section contact-hero-section" data-aos="fade-in">
+    <!-- Hero -->
+    <section class="hero" style="min-height: 50vh;">
+      <div class="hero-orb hero-orb-1"></div>
       <div class="container">
         <div class="hero-content">
-          <h1>Let's Connect Today</h1>
-          <p>Have questions? Ready to start your digital transformation? Our team is eager to hear from you.</p>
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            Get in touch
+          </div>
+          <h1>Let's build <span class="text-gradient">something great</span> together</h1>
+          <p>Have questions? Ready to start your digital transformation? We're here to help — and the first consultation is free.</p>
         </div>
       </div>
     </section>
 
-    <section class="contact-section">
+    <!-- Contact Form + Info -->
+    <section>
       <div class="container">
         <div class="contact-grid">
-          <div class="contact-info" data-aos="fade-right">
-            <h2>Get In Touch</h2>
-            <p>Reach out through any of these channels, and we will get back to you promptly.</p>
-            <div class="contact-methods">
-              <div class="contact-method"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><h3>Our Office</h3><p>Pretoria, Gauteng, 0002</p></div></div>
-              <div class="contact-method"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div><h3>Call Us</h3><p>(+27) 82 403-5469</p></div></div>
-              <div class="contact-method"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h3>Email Us</h3><p>nortsideconnect24@gmail.com</p></div></div>
+          <!-- Contact Info -->
+          <div class="contact-info-card reveal">
+            <span class="section-label">Reach us</span>
+            <h3 style="margin-bottom: var(--space-md);">Contact details</h3>
+
+            <div class="contact-method">
+              <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Our Office</h4>
+                <p>Pretoria, Gauteng, 0002</p>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <h4>Call Us</h4>
+                <p>(+27) 82 403-5469</p>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="c-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email Us</h4>
+                <p>nortsideconnect24@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-method" style="border-bottom: none;">
+              <div class="c-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h4>Business Hours</h4>
+                <p>Mon – Fri: 08:00 – 17:00</p>
+              </div>
+            </div>
+
+            <div class="social-links" style="margin-top: var(--space-lg);">
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
-          
-          <div class="contact-form-container" data-aos="fade-left">
-            <h2>Send Us a Message</h2>
-            <form id="contactForm" class="contact-form">
-              <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="Your full name" required /></div>
-              <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="Your email address" required /></div>
-              <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="Reason for your message" required /></div>
-              <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea></div>
-              <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Send Message</button>
-              <div id="formSuccess"><p>Your message has been sent!</p></div>
+
+          <!-- Contact Form -->
+          <div class="form-card reveal reveal-delay-1">
+            <span class="section-label">Send a message</span>
+            <h3 style="margin-bottom: var(--space-md);">Tell us about your project</h3>
+
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your full name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="you@company.co.za" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">What can we help with?</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="ai-agents">AI Agents &amp; Automation</option>
+                  <option value="mobile-app">Mobile App Development</option>
+                  <option value="cybersecurity">AI-Powered Cybersecurity</option>
+                  <option value="training">System Implementation Training</option>
+                  <option value="cipc">CIPC Company Registration</option>
+                  <option value="tax">Tax / SARS Registration</option>
+                  <option value="design">Graphic Design &amp; Branding</option>
+                  <option value="other">Other / General Enquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+
+              <div id="formSuccess">
+                <p style="margin: 0;">Message sent! We'll get back to you within 24 hours.</p>
+              </div>
             </form>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="faq-contact-section" style="background-color: #f7f8fa;">
+    <!-- FAQ -->
+    <section style="background: var(--bg-raised);">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Frequently Asked Questions</h2>
+        <div class="section-header centered">
+          <span class="section-label">FAQ</span>
+          <h2>Frequently asked questions</h2>
         </div>
-        <div class="faq-container" data-aos="fade-up">
-          <div class="faq-item"><div class="faq-question"><h3>How quickly can you start on my project?</h3><i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>Typically, we can begin within 1-2 weeks of finalizing project details. For urgent needs, we offer expedited options when available.</p></div></div>
-          <div class="faq-item"><div class="faq-question"><h3>Do you offer ongoing support?</h3><i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>Yes! We provide various support packages tailored to your needs, including maintenance, updates, and technical assistance.</p></div></div>
-          <div class="faq-item"><div class="faq-question"><h3>How do you handle data security?</h3><i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>Data security is our top priority. We implement industry-standard encryption, secure development practices, and regular security audits.</p></div></div>
+
+        <div style="max-width: 720px; margin: 0 auto;">
+          <div class="faq-item reveal">
+            <div class="faq-question">
+              <h3>How quickly can you start on my project?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Typically we can begin within 1–2 weeks of finalising project details. For urgent needs, we offer expedited options when available.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-1">
+            <div class="faq-question">
+              <h3>Do you offer ongoing support?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Yes! We provide various support packages tailored to your needs, including maintenance, updates, and technical assistance.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-2">
+            <div class="faq-question">
+              <h3>How much does CIPC registration cost?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>CIPC registration fees depend on the type of company (Pty Ltd, NPC, etc.). Get in touch for a clear, upfront quote — no hidden costs.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-3">
+            <div class="faq-question">
+              <h3>How do you handle data security?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Data security is our top priority. We implement industry-standard encryption, secure development practices, and regular security audits for every project.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <div class="faq-question">
+              <h3>Can you help with both tech and business admin?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely. That's our differentiator — we offer software development, AI solutions, AND business services like CIPC and SARS registration under one roof.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <div class="chatbot-bubble"><div class="chatbot-icon"><i class="fas fa-comments"></i></div></div>
-  <div class="chatbot-container">
-    <div class="chatbot-header"><h3><i class="fas fa-robot"></i> NortSide Assistant</h3><button class="close-btn" title="Close chatbot"><i class="fas fa-times"></i></button></div>
-    <div class="chatbot-body"><div class="chat-messages"><div class="chat-message bot"><p>Hello! Have a question? Ask me anything.</p></div></div>
-      <div class="chat-input"><input type="text" placeholder="Type your message..."><button aria-label="Send message"><i class="fas fa-paper-plane"></i></button></div>
+  <!-- Chatbot -->
+  <div class="chatbot-fab" id="chatbotFab">
+    <button aria-label="Open chat"><i class="fas fa-comments"></i></button>
+  </div>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-win-header">
+      <h4><i class="fas fa-robot"></i> NortSide Assistant</h4>
+      <button class="close-chat" id="chatClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-message bot"><p>Hi! Have a question? Ask me anything about our services.</p></div>
+    </div>
+    <div class="chat-input-wrap">
+      <input type="text" id="chatInput" placeholder="Type a message..." aria-label="Type a message" />
+      <button id="chatSend" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
     </div>
   </div>
 
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-        <div class="footer-content">
-          <div class="footer-logo"><img src="assets/logo.png" alt="NorthSide Connect Logo"><p>Empowering small businesses through technology.</p></div>
-          <div class="footer-links"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="service.html">Services</a></li><li><a href="why-ai.html">Why AI?</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-          <div class="footer-contact"><h3>Contact Us</h3><ul><li><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</li><li><i class="fas fa-phone"></i> +27 (82) 4035 469</li><li><i class="fas fa-envelope"></i> nortsideconnect24@gmail.com</li></ul></div>
-          <div class="footer-social"><h3>Follow Us</h3><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link" style="margin-bottom: 0;">
+            <div class="logo-mark">N</div>
+            <span>NortSide<span class="text-accent">.</span></span>
+          </a>
+          <p>Making advanced technology accessible to businesses of all sizes across South Africa.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
-        <div class="footer-bottom"><p>&copy; 2025 NortSide Connect. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p></div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="why-ai.html">Why AI?</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">AI Agents</a></li>
+            <li><a href="services.html">Mobile Apps</a></li>
+            <li><a href="services.html">Cybersecurity</a></li>
+            <li><a href="services.html">CIPC Registration</a></li>
+            <li><a href="services.html">Tax Registration</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i> +27 (82) 4035 469</div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i> nortsideconnect24@gmail.com</div>
+        </div>
       </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 NortSide Connect. All rights reserved.</p>
+        <div><a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a></div>
+      </div>
+    </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="js/app.js" defer></script>
 </body>
 </html>
