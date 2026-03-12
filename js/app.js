@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (/price|cost|how much|pricing/.test(lower)) {
           reply = 'Pricing depends on the project scope. Book a free consultation and we\'ll give you a personalised quote!';
         } else if (/contact|email|phone|call/.test(lower)) {
-          reply = 'You can reach us at nortsideconnect24@gmail.com or call +27 (82) 4035 469.';
+          reply = 'You can reach us at info@nortsideconnect.co.za or call +27 (66) 214 3149.';
         } else if (/thank/.test(lower)) {
           reply = 'You\'re welcome! Anything else I can help with?';
         } else if (/bye|goodbye/.test(lower)) {
