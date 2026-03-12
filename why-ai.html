@@ -1,151 +1,291 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NorthSide Connect - Discover how AI solutions can transform your small business with data-driven insights, automation, and competitive advantages." />
-  <meta name="keywords" content="AI for Small Business, Business AI Solutions, AI Benefits, Mobile App Development, Cybersecurity, Data-Driven Business" />
-  <meta name="author" content="NorthSide Connect" />
-  <title>Why AI for Your Business | NortSide Connect</title>
+  <meta name="description" content="Why your business needs AI — practical benefits, real-world applications, and how NortSide Connect can help you get started.">
+  <meta name="author" content="NortSide Connect">
+  <title>Why AI? — NortSide Connect</title>
   <link rel="stylesheet" href="css/main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
-  <meta name="google-adsense-account" content="ca-pub-7404613766674161">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
-  <div id="loader">
-    <div class="loader">
-        <img src="assets/logo.png" alt="NorthSide Connect Logo" class="loader-logo" />
-        <div class="loader-bar"></div>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">NortSide<span class="text-accent">.</span></div>
+      <div class="preloader-bar"><span></span></div>
     </div>
   </div>
 
-  <header class="main-header">
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
     <div class="container">
-      <a href="index.html" aria-label="NorthSide Connect Home">
-        <img src="assets/logo.png" alt="NorthSide Connect Logo" class="logo" />
+      <a href="index.html" class="logo-link" aria-label="NortSide Connect Home">
+        <div class="logo-mark">N</div>
+        <span>NortSide<span class="text-accent">.</span></span>
       </a>
-      <nav class="nav-menu" aria-label="Main Navigation">
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
         <ul>
-          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="about.html"><i class="far fa-compass"></i> About Us</a></li>
-          <li><a href="service.html"><i class="fas fa-laptop-code"></i> Services</a></li>
-          <li><a href="why-ai.html" class="active"><i class="fas fa-microchip"></i> Why AI?</a></li>
-          <li><a href="contact.html"><i class="far fa-comment-dots"></i> Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="why-ai.html" class="active">Why AI?</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <div class="mobile-toggle">
-        <i class="fas fa-bars"></i>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun icon-sun"></i>
+          <i class="fas fa-moon icon-moon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="hero-section ai-hero-section" data-aos="fade-in">
-        <div class="container">
-          <div class="hero-content">
-            <h1>Transform Your Business with AI</h1>
-            <p>Discover how artificial intelligence can give your business the competitive edge in today's digital marketplace.</p>
-          </div>
-          <div class="ai-stats">
-            <div class="ai-stat" data-aos="fade-up" data-aos-delay="100"><span class="stat-counter" data-target="43">80</span>%<p>Increased Productivity</p></div>
-            <div class="ai-stat" data-aos="fade-up" data-aos-delay="200"><span class="stat-counter" data-target="37">90</span>%<p>Average Cost Reduction</p></div>
-            <div class="ai-stat" data-aos="fade-up" data-aos-delay="300"><span class="stat-counter" data-target="60">90</span>%<p>of Customers Prefer Personalization</p></div>
-          </div>
-        </div>
-    </section>
-
-    <section class="ai-benefits-section">
+    <!-- Hero -->
+    <section class="hero" style="min-height: 55vh;">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Key Benefits for Small Businesses</h2>
-          <p>AI isn't just for big corporations. Here's how it can help your business thrive.</p>
-        </div>
-        
-        <div class="benefits-grid">
-          <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Data-Driven Decisions</h3>
-            <p>Transform raw data into actionable insights to help you make smarter, more informed choices.</p>
-            <a href="#" class="benefit-link" data-modal="data-modal">Learn More <i class="fas fa-arrow-right"></i></a>
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            The AI advantage
           </div>
-          
-          <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="benefit-icon"><i class="fas fa-robot"></i></div>
-            <h3>Automation & Efficiency</h3>
-            <p>Automate repetitive tasks and streamline workflows, from inventory to customer communications.</p>
-            <a href="#" class="benefit-link" data-modal="automation-modal">Learn More <i class="fas fa-arrow-right"></i></a>
-          </div>
-          
-          <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="benefit-icon"><i class="fas fa-users"></i></div>
-            <h3>Enhanced Customer Experience</h3>
-            <p>Deliver personalized interactions at scale and provide tailored recommendations.</p>
-            <a href="#" class="benefit-link" data-modal="customer-modal">Learn More <i class="fas fa-arrow-right"></i></a>
+          <h1>Why AI is <span class="text-gradient">no longer optional</span> for growing businesses</h1>
+          <p>AI isn't just for big tech anymore. It's the most practical way for small businesses to cut costs, serve customers better, and compete at scale.</p>
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-primary btn-lg">Get started with AI <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="ai-implementation-section" style="background-color: #f7f8fa;">
+    <!-- Key Stats -->
+    <section>
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Our AI Implementation Roadmap</h2>
-          <p>Getting started with AI doesn't have to be complicated. We follow a proven path.</p>
+        <div class="section-header centered">
+          <span class="section-label">The numbers</span>
+          <h2>AI is transforming small business</h2>
         </div>
 
-        <div class="timeline">
-            <div class="timeline-item" data-aos="fade-up"><div class="timeline-icon">1</div><div class="timeline-content"><h3>Assessment & Discovery</h3><p>We analyze your processes to find the highest-impact areas for AI integration.</p></div></div>
-            <div class="timeline-item" data-aos="fade-up"><div class="timeline-icon">2</div><div class="timeline-content"><h3>Solution Design</h3><p>We design custom AI solutions that integrate seamlessly with your existing systems.</p></div></div>
-            <div class="timeline-item" data-aos="fade-up"><div class="timeline-icon">3</div><div class="timeline-content"><h3>Implementation & Training</h3><p>We handle the technical setup and provide comprehensive training for your team.</p></div></div>
-            <div class="timeline-item" data-aos="fade-up"><div class="timeline-icon">4</div><div class="timeline-content"><h3>Optimization & Growth</h3><p>Our ongoing support helps refine your AI systems and adapt to your evolving needs.</p></div></div>
+        <div class="grid grid-3">
+          <div class="service-card reveal" style="text-align: center;">
+            <div style="font-family: var(--font-display); font-size: 3rem; font-weight: 800; line-height: 1;" class="text-gradient" data-count="40">0</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.5rem 0 0;">percent average cost reduction through AI automation</p>
+          </div>
+          <div class="service-card reveal reveal-delay-1" style="text-align: center;">
+            <div style="font-family: var(--font-display); font-size: 3rem; font-weight: 800; line-height: 1;" class="text-gradient" data-count="24">0</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.5rem 0 0;">hours a day your AI systems can operate without rest</p>
+          </div>
+          <div class="service-card reveal reveal-delay-2" style="text-align: center;">
+            <div style="font-family: var(--font-display); font-size: 3rem; font-weight: 800; line-height: 1;" class="text-gradient" data-count="67">0</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.5rem 0 0;">percent of SMEs plan to adopt AI within the next 2 years</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Benefits -->
+    <section style="background: var(--bg-raised);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Practical benefits</span>
+          <h2>What AI actually does for your business</h2>
+          <p>Not hype. Not theory. Real, practical outcomes you'll see in your bottom line.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="benefit-card reveal">
+            <div class="service-icon-wrap"><i class="fas fa-clock"></i></div>
+            <h3>Save time on repetitive tasks</h3>
+            <p>AI handles data entry, scheduling, invoicing follow-ups, and customer FAQs — freeing your team to focus on work that requires human judgment and creativity.</p>
+          </div>
+
+          <div class="benefit-card reveal reveal-delay-1">
+            <div class="service-icon-wrap"><i class="fas fa-headset"></i></div>
+            <h3>Serve customers 24/7</h3>
+            <p>AI chatbots and agents handle customer enquiries around the clock — even at 2am on a Sunday. No extra staff needed, no enquiries lost.</p>
+          </div>
+
+          <div class="benefit-card reveal">
+            <div class="service-icon-wrap"><i class="fas fa-chart-line"></i></div>
+            <h3>Make better decisions with data</h3>
+            <p>AI analyses your sales patterns, customer behaviour, and operations to surface insights you'd never spot manually — turning data into action.</p>
+          </div>
+
+          <div class="benefit-card reveal reveal-delay-1">
+            <div class="service-icon-wrap"><i class="fas fa-expand-arrows-alt"></i></div>
+            <h3>Scale without hiring</h3>
+            <p>Handle 10x the customer volume without 10x the team. AI lets you grow revenue while keeping costs under control.</p>
+          </div>
+
+          <div class="benefit-card reveal">
+            <div class="service-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+            <h3>Protect your business</h3>
+            <p>AI-powered cybersecurity detects threats in milliseconds — far faster than any human analyst. Stay protected from data breaches and fraud.</p>
+          </div>
+
+          <div class="benefit-card reveal reveal-delay-1">
+            <div class="service-icon-wrap"><i class="fas fa-trophy"></i></div>
+            <h3>Compete with the big players</h3>
+            <p>AI gives small businesses the same analytical and operational capabilities that large corporations spend millions on. The playing field is levelling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section>
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-label">Real applications</span>
+          <h2>How our clients use AI</h2>
+          <p>Practical examples of AI at work in South African small businesses.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="service-card reveal" style="text-align: center;">
+            <div class="service-icon-wrap" style="margin-left: auto; margin-right: auto;"><i class="fas fa-store"></i></div>
+            <h3>Retail</h3>
+            <p>AI-powered inventory management that predicts stockouts before they happen, automated customer service, and personalised product recommendations.</p>
+          </div>
+
+          <div class="service-card reveal reveal-delay-1" style="text-align: center;">
+            <div class="service-icon-wrap" style="margin-left: auto; margin-right: auto;"><i class="fas fa-truck"></i></div>
+            <h3>Logistics</h3>
+            <p>Route optimisation, demand forecasting, and automated dispatch scheduling that reduce costs and improve delivery times.</p>
+          </div>
+
+          <div class="service-card reveal reveal-delay-2" style="text-align: center;">
+            <div class="service-icon-wrap" style="margin-left: auto; margin-right: auto;"><i class="fas fa-briefcase"></i></div>
+            <h3>Professional Services</h3>
+            <p>Automated appointment booking, client onboarding workflows, document processing, and intelligent lead qualification.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Getting Started -->
+    <section style="background: var(--bg-raised);">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-label">Getting started</span>
+          <h2>You don't need a tech team to start with AI</h2>
+          <p>We handle the technical complexity. Here's how simple it is to get started.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="service-card reveal" style="text-align: center;">
+            <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--accent); opacity: 0.3; margin-bottom: var(--space-sm);">01</div>
+            <h3>Tell us what's slowing you down</h3>
+            <p style="font-size: 0.9rem;">We identify the tasks, processes, or bottlenecks where AI can have the biggest impact on your business.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-1" style="text-align: center;">
+            <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--accent); opacity: 0.3; margin-bottom: var(--space-sm);">02</div>
+            <h3>We build your custom solution</h3>
+            <p style="font-size: 0.9rem;">No off-the-shelf products. We develop AI tools tailored to your specific business workflows and goals.</p>
+          </div>
+          <div class="service-card reveal reveal-delay-2" style="text-align: center;">
+            <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--accent); opacity: 0.3; margin-bottom: var(--space-sm);">03</div>
+            <h3>You see results, we provide support</h3>
+            <p style="font-size: 0.9rem;">We train your team, monitor performance, and continuously optimise your AI systems for maximum ROI.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
     <section class="cta-section">
       <div class="container">
-        <div class="cta-content" data-aos="zoom-in">
-          <h2>Ready to Bring AI into Your Business?</h2>
-          <p>Schedule a free consultation with our specialists to discover the perfect solutions for you.</p>
-          <div class="cta-buttons">
-            <a href="contact.html" class="btn btn-light"><i class="fas fa-calendar-alt"></i> Book a Consultation</a>
-          </div>
+        <div class="section-header centered" style="margin-bottom: var(--space-lg);">
+          <h2>Ready to put <span class="text-gradient">AI to work?</span></h2>
+          <p>The first consultation is free. Let's explore what AI can do for your specific business.</p>
+        </div>
+        <div class="cta-buttons" style="justify-content: center;">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Book free AI consultation</a>
+          <a href="services.html" class="btn btn-outline btn-lg">View all services</a>
         </div>
       </div>
     </section>
   </main>
-  
-  <div id="data-modal" class="modal-container"><div class="modal-content"><span class="close-modal">&times;</span><h3>Data-Driven Decisions</h3><p>AI analytics uncover insights from your business data that would be impossible to spot manually, helping you forecast trends and understand customer behavior.</p></div></div>
-  <div id="automation-modal" class="modal-container"><div class="modal-content"><span class="close-modal">&times;</span><h3>Automation & Efficiency</h3><p>AI automation tools free up your most valuable resource: time. By handling repetitive tasks, AI lets your team focus on creative problem-solving and building customer relationships.</p></div></div>
-  <div id="customer-modal" class="modal-container"><div class="modal-content"><span class="close-modal">&times;</span><h3>Enhanced Customer Experience</h3><p>AI helps you deliver personalized experiences at scale, making every customer feel understood and valued without overwhelming your team.</p></div></div>
-  
-  <div class="chatbot-bubble"><div class="chatbot-icon"><i class="fas fa-comments"></i></div></div>
-  <div class="chatbot-container">
-    <div class="chatbot-header"><h3><i class="fas fa-robot"></i> NortSide Assistant</h3><button class="close-btn" title="Close chatbot"><i class="fas fa-times"></i></button></div>
-    <div class="chatbot-body"><div class="chat-messages"><div class="chat-message bot"><p>Hello! Interested in our AI solutions? How can I help?</p></div></div>
-      <div class="chat-input"><input type="text" placeholder="Type your message..."><button aria-label="Send message"><i class="fas fa-paper-plane"></i></button></div>
+
+  <!-- Chatbot -->
+  <div class="chatbot-fab" id="chatbotFab">
+    <button aria-label="Open chat"><i class="fas fa-comments"></i></button>
+  </div>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-win-header">
+      <h4><i class="fas fa-robot"></i> NortSide Assistant</h4>
+      <button class="close-chat" id="chatClose" aria-label="Close chat"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-message bot"><p>Curious about AI? Ask me anything about how it can help your business.</p></div>
+    </div>
+    <div class="chat-input-wrap">
+      <input type="text" id="chatInput" placeholder="Type a message..." aria-label="Type a message" />
+      <button id="chatSend" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
     </div>
   </div>
 
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo"><img src="assets/logo.png" alt="NorthSide Connect Logo"><p>Empowering small businesses through technology.</p></div>
-        <div class="footer-links"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="service.html">Services</a></li><li><a href="why-ai.html">Why AI?</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="footer-contact"><h3>Contact Us</h3><ul><li><i class="fas fa-map-marker-alt"></i> Pretoria, South Africa</li><li><i class="fas fa-phone"></i> +27 (82) 4035 469</li><li><i class="fas fa-envelope"></i> nortsideconnect24@gmail.com</li></ul></div>
-        <div class="footer-social"><h3>Follow Us</h3><div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-link" style="margin-bottom: 0;">
+            <div class="logo-mark">N</div>
+            <span>NortSide<span class="text-accent">.</span></span>
+          </a>
+          <p>Making advanced technology accessible to businesses of all sizes across South Africa.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="why-ai.html">Why AI?</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">AI Agents</a></li>
+            <li><a href="services.html">Mobile Apps</a></li>
+            <li><a href="services.html">Cybersecurity</a></li>
+            <li><a href="services.html">CIPC Registration</a></li>
+            <li><a href="services.html">Tax Registration</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> Pretoria, Gauteng, South Africa</div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i> +27 (82) 4035 469</div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i> nortsideconnect24@gmail.com</div>
+        </div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2025 NortSide Connect. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p></div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 NortSide Connect. All rights reserved.</p>
+        <div><a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a></div>
+      </div>
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="js/app.js" defer></script>
 </body>
 </html>
